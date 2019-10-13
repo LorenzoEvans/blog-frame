@@ -11,7 +11,8 @@
                  [yogthos/config "1.1.5"]
                  [ring "1.7.1"]
                  [herb "0.10.0"]
-                 [kibu/pushy "0.3.8"]]
+                 [kibu/pushy "0.3.8"]
+                 [clj-tagsoup/clj-tagsoup "0.3.0" :exclusions [org.clojure/clojure]]]
 
   :plugins []
 
