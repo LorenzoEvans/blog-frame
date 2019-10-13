@@ -2,23 +2,18 @@
   (:require
    [re-frame.core :as re-frame]
    [defblog.subs :as subs]
-   ))
+   [defblog.layout :refer [background]]))
 
 
 ;; home
 
-(defn home-panel []
-  (let [name (re-frame/subscribe [::subs/name])]
-    [:div
-     [:h1 (str "Hello from " @name ". This is the Home Page.")]
 
-     [:div
-      [:a {:href "#/about"}
-       "go to About Page"]]
-     ]))
+(defn home-panel []
+  [:div {:class (str background)}])
 
 
 ;; about
+
 
 (defn about-panel []
   [:div
@@ -30,6 +25,7 @@
 
 
 ;; main
+
 
 (defn- panels [panel-name]
   (case panel-name

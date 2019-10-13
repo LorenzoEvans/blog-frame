@@ -1,0 +1,1 @@
+{"version":3,"sources":["defblog/layout.cljs"],"mappings":";;AAEA,AAAA,AAAKA","names":["defblog.layout/background"],"sourcesContent":["(ns defblog.layout)\n\n(def background \"bg-light-silver\")"]}
