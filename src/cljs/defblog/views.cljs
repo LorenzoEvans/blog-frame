@@ -2,15 +2,17 @@
   (:require
    [re-frame.core :as re-frame]
    [defblog.subs :as subs]
-   [defblog.layout :refer [background]]))
+   [defblog.layout]
+   [herb.core :refer [<class]]
+   [defblog.styles :refer [global-styles]]
+   [defblog.layout :refer [blog-nav]]))
 
 
 ;; home
 
 
 (defn home-panel []
-  [:div {:class (str background)} "Home"
-   [:a {:href "/about"} "About"]])
+  [:div {:class global-styles} [blog-nav]])
 
 
 ;; about
