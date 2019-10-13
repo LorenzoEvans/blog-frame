@@ -10,7 +10,8 @@
                  [compojure "1.6.1"]
                  [yogthos/config "1.1.5"]
                  [ring "1.7.1"]
-                 [herb "0.10.0"]]
+                 [herb "0.10.0"]
+                 [kibu/pushy "0.3.8"]]
 
   :plugins []
 
@@ -20,7 +21,6 @@
 
   :clean-targets ^{:protect false} ["resources/public/js/compiled" "target"]
 
-
   :aliases {"dev"  ["with-profile" "dev" "run" "-m" "shadow.cljs.devtools.cli" "watch" "app"]
             "prod" ["with-profile" "prod" "run" "-m" "shadow.cljs.devtools.cli" "release" "app"]}
 
@@ -28,12 +28,11 @@
   {:dev
    {:dependencies [[binaryage/devtools "0.9.10"]]}
 
-   :prod { }
+   :prod {}
 
    :uberjar {:source-paths ["env/prod/clj"]
              :omit-source  true
              :main         defblog.server
              :aot          [defblog.server]
              :uberjar-name "defblog.jar"
-             :prep-tasks   ["compile" ["prod"]]}
-   })
+             :prep-tasks   ["compile" ["prod"]]}})

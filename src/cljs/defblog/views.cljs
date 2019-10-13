@@ -9,7 +9,8 @@
 
 
 (defn home-panel []
-  [:div {:class (str background)}])
+  [:div {:class (str background)} "Home"
+   [:a {:href "/about"} "About"]])
 
 
 ;; about
@@ -20,7 +21,7 @@
    [:h1 "This is the About Page."]
 
    [:div
-    [:a {:href "#/"}
+    [:a {:href "/"}
      "go to Home Page"]]])
 
 

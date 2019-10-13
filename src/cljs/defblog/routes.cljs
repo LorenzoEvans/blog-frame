@@ -7,27 +7,33 @@
    [goog.history.EventType :as EventType]
    [re-frame.core :as re-frame]
    [defblog.events :as events]
-   ))
+   [pushy.core :as push]))
 
-(defn hook-browser-navigation! []
-  (doto (History.)
-    (gevents/listen
-     EventType/NAVIGATE
-     (fn [event]
-       (secretary/dispatch! (.-token event))))
-    (.setEnabled true)))
+; (defn hook-browser-navigation! []
+;   (doto (History.)
+;     (gevents/listen
+;      EventType/NAVIGATE
+;      (fn [event]
+;        (secretary/dispatch! (.-token event))))
+;     (.setEnabled true)))
+
+
+(defn hook-routes! []
+  (def history (push/pushy secretary/dispatch! (fn [x] (when (secretary/locate-route x) x))))
+  (push/start! history))
 
 (defn app-routes []
-  (secretary/set-config! :prefix "#")
+  (secretary/set-config! :prefix "/")
   ;; --------------------
   ;; define routes here
   (defroute "/" []
-    (re-frame/dispatch [::events/set-active-panel :home-panel])
-    )
+    (re-frame/dispatch [::events/set-active-panel :home-panel]))
 
   (defroute "/about" []
     (re-frame/dispatch [::events/set-active-panel :about-panel]))
 
 
   ;; --------------------
-  (hook-browser-navigation!))
+
+
+  (hook-routes!))
