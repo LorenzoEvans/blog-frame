@@ -9,7 +9,8 @@
                  [secretary "1.2.3"]
                  [compojure "1.6.1"]
                  [yogthos/config "1.1.5"]
-                 [ring "1.7.1"]]
+                 [ring "1.7.1"]
+                 [herb "0.10.0"]]
 
   :plugins []
 
