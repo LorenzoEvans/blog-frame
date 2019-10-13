@@ -12,9 +12,9 @@ defblog.views.about_panel = (function defblog$views$about_panel(){
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"h1","h1",-1896887462),"This is the About Page."], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"a","a",-2123407586),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"href","href",-793805698),"/"], null),"go to Home Page"], null)], null)], null);
 });
 defblog.views.panels = (function defblog$views$panels(panel_name){
-var G__45005 = panel_name;
-var G__45005__$1 = (((G__45005 instanceof cljs.core.Keyword))?G__45005.fqn:null);
-switch (G__45005__$1) {
+var G__45011 = panel_name;
+var G__45011__$1 = (((G__45011 instanceof cljs.core.Keyword))?G__45011.fqn:null);
+switch (G__45011__$1) {
 case "home-panel":
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [defblog.views.home_panel], null);
 
@@ -32,8 +32,8 @@ defblog.views.show_panel = (function defblog$views$show_panel(panel_name){
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [defblog.views.panels,panel_name], null);
 });
 defblog.views.main_panel = (function defblog$views$main_panel(){
-var active_panel = (function (){var G__45006 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.subs","active-panel","defblog.subs/active-panel",-382304736)], null);
-return (re_frame.core.subscribe.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.subscribe.cljs$core$IFn$_invoke$arity$1(G__45006) : re_frame.core.subscribe.call(null,G__45006));
+var active_panel = (function (){var G__45012 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.subs","active-panel","defblog.subs/active-panel",-382304736)], null);
+return (re_frame.core.subscribe.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.subscribe.cljs$core$IFn$_invoke$arity$1(G__45012) : re_frame.core.subscribe.call(null,G__45012));
 })();
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [defblog.views.show_panel,cljs.core.deref(active_panel)], null);
 });
