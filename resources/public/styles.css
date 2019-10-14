@@ -1,7 +1,7 @@
 .bg-img {
     z-index: -1;
     height: 100%;
-    width: auto;
+    width: 50%;
     transform: rotate(180deg);
     left: 0;
     top: 0;
@@ -10,4 +10,8 @@
 .over-div {
     display: flex;
     flex-direction: row;
+}
+
+.content-section {
+    width: 50%;
 }

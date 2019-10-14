@@ -57,7 +57,7 @@
     [about-anchor]
     [:img.absolute.bg-img {:src "/assets/paintswirl.jpeg"}]]])
 
-(def main-content "h-50 w-50 bg-washed-red")
+(def main-content "h-50 w-100 bg-washed-red")
 (defn sidebar  []
   [:div.flex.flex-row.justify-between.w-auto
    [side-bar]
