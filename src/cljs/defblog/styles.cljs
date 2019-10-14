@@ -1,10 +1,9 @@
 (ns defblog.styles)
+(def home-div "flex flex-column h-100 justify-center ")
+(def title-style "br tc bw3 pr3 tl self-center lightest-blue hover-hot-pink")
 
+(def nav-style "flex flex-row w-100 h-50 f2 bb fw4 helvetica b--black bw1 tc w-20")
 
-(def blog-title-style "f2 dark-gray fw4 helvetica pa3 mb2 bb bw0")
+(def global-styles "vh-100")
 
-(def global-styles "vh-100 bg-light-gray")
-
-(def nav-style "w-100")
-
-(def anchor-style "helvetica fw3 f4 no-underline near-black bb bt bw1 br4 pa2 ma2")
+(def anchor-style "helvetica h3 self-center tc fw4 f4 no-underline near-black ba bw1 br2 pa2 ml4")
