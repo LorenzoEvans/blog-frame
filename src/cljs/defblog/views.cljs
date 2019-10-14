@@ -5,14 +5,16 @@
    [defblog.layout]
    [herb.core :refer [<class]]
    [defblog.styles :refer [global-styles]]
-   [defblog.layout :refer [blog-nav]]))
+   [defblog.layout :refer [sidebar]]))
 
 
 ;; home
 
 
 (defn home-panel []
-  [:div {:class global-styles} [blog-nav]])
+  [:div 
+   [sidebar]
+   [:div "Help"]])
 
 
 ;; about
