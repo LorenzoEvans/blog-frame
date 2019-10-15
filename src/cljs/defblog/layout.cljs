@@ -42,7 +42,7 @@
 ;          :g {:title "Layer 1"}}])
 
 (defn blog-title []
-  [:div.flex.flex-column 
+  [:div.flex.flex-column.ba.b--hot-pink.bw2.dim.h-30 
    [:div {:class title-style} "Maybe Sheep"
     [:span {:class title-content} "By :: 0xLE"]
     [:div {:class title-content}  "may contain: code, art, beauty, logic"]]
@@ -59,7 +59,6 @@
 (defn side-bar []
   [:div {:class home-div}
    [:nav {:class nav-style}
-    [:span "hi"]
     [blog-title]
     [:img.absolute.bg-img {:src "/assets/paintswirl.jpeg"}]]])
 
