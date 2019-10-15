@@ -2,6 +2,7 @@
   (:require [defblog.styles :refer [anchor-style
                                     nav-style
                                     title-style
+                                    title-content
                                     home-div
                                     ]]
             [herb.core :refer [<class]]))
@@ -41,7 +42,12 @@
 ;          :g {:title "Layer 1"}}])
 
 (defn blog-title []
-  [:div {:class title-style} "Maybe Sheep"])
+  [:div.flex.flex-column 
+   [:div {:class title-style} "Maybe Sheep"
+    [:span {:class title-content} "By :: 0xLE"]
+    [:div {:class title-content}  "may contain: code, art, beauty, logic"]]
+   
+   ])
 
 ; (defn blog-nav []
 ;   [:div {:class home-div}
@@ -53,12 +59,11 @@
 (defn side-bar []
   [:div {:class home-div}
    [:nav {:class nav-style}
+    [:span "hi"]
     [blog-title]
-    [about-anchor]
     [:img.absolute.bg-img {:src "/assets/paintswirl.jpeg"}]]])
 
-(def main-content "h-50 w-100 bg-washed-red")
+(def main-content "h-100 w-80 bg-washed-red ba b--black helvetica")
 (defn sidebar  []
-  [:div.flex.flex-row.justify-between.w-auto
-   [side-bar]
-   [:div {:class main-content} "Hi"]])
+  [:div.flex.flex-row.justify-between.h-100
+   [side-bar]])

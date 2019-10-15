@@ -13,8 +13,7 @@
 
 (defn home-panel []
   [:div 
-   [sidebar]
-   [:div "Help"]])
+   [sidebar]])
 
 
 ;; about
