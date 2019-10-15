@@ -12,7 +12,7 @@
 
 
 (defn home-panel []
-  [:div 
+  [:div.flex.flex-column.justify-between 
    [sidebar]])
 
 

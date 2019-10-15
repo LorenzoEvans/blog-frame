@@ -20,3 +20,8 @@
 #app {
     height: 100vh;
 }
+
+.maybe-sheep:hover {
+    border: #FFDFDF;
+
+}

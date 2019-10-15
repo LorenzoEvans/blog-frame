@@ -2,6 +2,7 @@
   (:require [defblog.styles :refer [anchor-style
                                     nav-style
                                     title-style
+                                    title-style-extra
                                     title-content
                                     home-div
                                     ]]
@@ -42,12 +43,12 @@
 ;          :g {:title "Layer 1"}}])
 
 (defn blog-title []
-  [:div.flex.flex-column.ba.b--hot-pink.bw2.dim.h-30 
-   [:div {:class title-style} "Maybe Sheep"
-    [:span {:class title-content} "By :: 0xLE"]
-    [:div {:class title-content}  "may contain: code, art, beauty, logic"]]
-   
-   ])
+  [:div.flex.flex-column.justify-center.br1.ba.b--lightest-purple.bw4.h-30.grow.w-50 {:class title-style}
+   [:div.absolute.bg-washed-red.h-100.w-100.o-10]
+   [:span {:class title-style-extra} "Maybe Sheep"
+    [:div {:class title-content} "By : : #0xLE"]
+    [:div.fw2.f5 "ANARCHITECTURE, AN ORCISH TESTER, AN ARC INSPECTION, AN ARK LIT PRESSURE, "]
+    [:div {:class title-content}  "warning! may contain: code, art, beauty, logic"]]])
 
 ; (defn blog-nav []
 ;   [:div {:class home-div}
@@ -64,5 +65,5 @@
 
 (def main-content "h-100 w-80 bg-washed-red ba b--black helvetica")
 (defn sidebar  []
-  [:div.flex.flex-row.justify-between.h-100
+  [:div.flex.flex-column.justify-between.h-100
    [side-bar]])
