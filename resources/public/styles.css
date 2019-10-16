@@ -27,5 +27,5 @@
 }
 
 .bg-image {
-    background-image: url('../public//assets/paintswirl.jpeg')
+    background-image: url('./assets/paintswirl.jpeg')
 }
