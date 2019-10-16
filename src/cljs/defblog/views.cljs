@@ -13,7 +13,8 @@
 
 (defn home-panel []
   [:div.flex.flex-column.justify-between 
-   [sidebar]])
+   [sidebar]
+   [:div.ba.b--blue.bw2.w-100.h-100-l "hmm"]])
 
 
 ;; about
