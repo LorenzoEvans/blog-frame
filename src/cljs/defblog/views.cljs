@@ -5,15 +5,17 @@
    [defblog.layout]
    [herb.core :refer [<class]]
    [defblog.styles :refer [global-styles]]
-   [defblog.layout :refer [sidebar]]))
+   [defblog.layout :refer [sidebar
+                           article-section]]))
 
 
 ;; home
 
 
 (defn home-panel []
-  [:div.flex.flex-column.justify-between 
-   [sidebar]])
+  [:div.flex.flex-column.justify-between.h-100.bg-washed-green 
+   [sidebar]
+   [article-section]])
 
 
 ;; about

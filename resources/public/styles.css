@@ -1,8 +1,6 @@
 .bg-img {
-    z-index: -1;
     height: 100%;
     width: 100%;
-    transform: rotate(180deg);
     left: 0;
     top: 0;
     box-shadow: 2px solid black inset;
@@ -17,7 +15,7 @@
     width: 50%;
 }
 
-#app {
+#app.div {
     height: 100vh;
 }
 
@@ -27,5 +25,8 @@
 }
 
 .bg-image {
-    background-image: url('./assets/paintswirl.jpeg')
+    background-image: url('./assets/geoms.jpeg');
+    width: 100%;
+    height: 400px;
+    background-size: contain;
 }

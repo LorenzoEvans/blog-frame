@@ -39,7 +39,7 @@
    [:p.lh-copy.measure.center.f6.black-70 "Content"]])
 
 (defn article-section []
-  [:article.mv5.flex.justify-around.h-100.flex-row.flex-wrap.bg-near-black.bt.bw4.b--silver
+  [:article.mv5.flex.justify-around.h-100.flex-row.flex-wrap
    [:a.fl.w-50.w-25-l.h7-ns.link.overflow-hidden.ma2
     [:div.grow [article]]]
    [:a.fl.w-50.w-25-l.h7-ns.link.overflow-hidden.ma2
@@ -67,7 +67,7 @@
 
 
 (defn blog-title-content []
-  [:header.flex.flex-column.justify-center.br1.ba.b--lightest-purple.bw4.h-30.grow.w-50.mb7-ns {:class title-style}
+  [:header.flex.flex-column.justify-center.br1.ba.b--lightest-purple.bw4.h-30.grow.w-50 {:class title-style}
    [:div.absolute.bg-washed-red.h-100.w-100.o-10]
    [:span {:class title-style-extra} "Maybe Black Sheep"
     [:div.tracked-mega {:class title-content} "By : : 0xLE"]
@@ -76,7 +76,7 @@
 
 (defn blog-title []
   [:header
-  [:div.cover.bg-left.bg-center-l.bg-image  {:src "/assets/paintswirl.jpeg"}
+  [:div.cover.bg-left.bg-center-l.bg-image
    [:div.pb5.pb6-m.pb7-l
     [:nav.dt.w-100.mw8.center
      [:div.dtc.w2.v-mid.pa3
@@ -87,16 +87,15 @@
       [:a.f6.fw4.hover-white.no-underline.white-70.dn.dib-ns.pv2.ph3 "Link"]
       [:a.f6.fw4.hover-white.no-underline.white-70.dn.dib-ns.pv2.ph3 "Link"]
       [:a.f6.fw4.hover-white.no-underline.white-70.dn.dib-ns.pv2.ph3 "Link"]]]
-    [:div.tc-l.mt4.mt5-5.mt6-l.ph3
+    [:div.flex.justify-center
      [blog-title-content]]]]])
 
 (defn side-bar []
-  [:div.mb4 {:class home-div}
-   [:img.absolute.bg-img.no-repeat.center]
+  [:div {:class home-div}
    [:nav {:class nav-style}
     [blog-title]]])
 
 (def main-content "h-100 w-80 bg-washed-red ba b--black helvetica")
 (defn sidebar  []
-  [:div.flex.flex-column.justify-between.h-100
+  [:div
    [side-bar]])
