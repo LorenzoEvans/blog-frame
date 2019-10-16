@@ -27,6 +27,10 @@
 ;                                  :child [modal/hello]
 ;                                  :size :small}])} "Show me the modal!"])
 
+(defn bg-image []
+  )
+
+
 (defn article []
   [:article.mw6.center.bg-washed-red.br3.pa4-ns.ma5
    [:div.tc
@@ -62,13 +66,18 @@
     [:div.grow [article]]]])
 
 
+; (defn blog-title []
+;   [:header.flex.flex-column.justify-center.br1.ba.b--lightest-purple.bw4.h-30.grow.w-50.mb7-ns {:class title-style}
+;    [:div.absolute.bg-washed-red.h-100.w-100.o-10]
+;    [:span {:class title-style-extra} "Maybe Black Sheep"
+;     [:div.tracked-mega {:class title-content} "By : : 0xLE"]
+;     [:div.fw2.f7.tracked-mega.outline.pa1 "ANARCHITECTURE, AN ORCISH TESTER, AN ARC INSPECTION, AN ARK LIT PRESSURE, AARDVARK CONJECTURE..."]
+;     [:div {:class title-content}  "warning! may contain: code, art, beauty, logic"]]])
+
 (defn blog-title []
-  [:div.flex.flex-column.justify-center.br1.ba.b--lightest-purple.bw4.h-30.grow.w-50.mb7-ns {:class title-style}
-   [:div.absolute.bg-washed-red.h-100.w-100.o-10]
-   [:span {:class title-style-extra} "Maybe Black Sheep"
-    [:div.tracked-mega {:class title-content} "By : : 0xLE"]
-    [:div.fw2.f7.tracked-mega.outline.pa1 "ANARCHITECTURE, AN ORCISH TESTER, AN ARC INSPECTION, AN ARK LIT PRESSURE, AARDVARK CONJECTURE..."]
-    [:div {:class title-content}  "warning! may contain: code, art, beauty, logic"]]])
+  [:header
+  [:div.cover.bg-left.bg-center-l.bg-image
+   [:div.bg-black-80.pb5.pb6-m.pb7-l]]])
 
 (defn side-bar []
   [:div.mb4 {:class home-div}

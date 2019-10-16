@@ -25,3 +25,7 @@
     border: #FFDFDF;
 
 }
+
+.bg-image {
+    background-image: url('../public//assets/paintswirl.jpeg')
+}
