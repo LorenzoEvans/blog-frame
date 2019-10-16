@@ -1,1 +1,1 @@
-{"version":3,"sources":["defblog/db.cljs"],"mappings":";;AAEA,AAAA,AAAA,AAAA,AAAKA","names":["defblog.db/default-db"],"sourcesContent":["(ns defblog.db)\n\n(def default-db\n  {:name \"re-frame\"})\n"]}
+{"version":3,"sources":["defblog/db.cljs"],"mappings":";;AAEA,AAAA,AAAA,AAAA,AAAA,AAAA,AAAKA","names":["defblog.db/default-db"],"sourcesContent":["(ns defblog.db)\n\n(def default-db\n  {:name \"re-frame\"\n   :modal \"\"})\n"]}

@@ -1,4 +1,5 @@
 (ns defblog.db)
 
 (def default-db
-  {:name "re-frame"})
+  {:name "re-frame"
+   :modal ""})
