@@ -71,7 +71,7 @@
    [:div.bg-washed-red.h-100.w-100.o-10]
    [:span {:class title-style-extra} "Maybe Black Sheep"
     [:div.tracked-mega.mt1 {:class title-content} "By : : 0xLE"]
-    [:div.fw1.f5.tracked-mega.pa1.washed-blue.shadow-5-ns.hot-pink.ba.b--black.bw1.text-hover.pa2 [:span.o-70.fw4 "ANARCHITECTURE, AN ORCISH TESTER, AN ARC INSPECTION, AN ARK LIT PRESSURE, AARDVARK CONJECTURE..."]]
+    [:div.fw1.f4.pa2.washed-blue.text-hover.outline-transparent.bw1.pa2.h4.avenir [:span.o-80.fw1.pa3.ma2 "ANARCHITECTURE, AN ORCISH TESTER, AN ARC INSPECTION, AN ARK LIT PRESSURE, AARDVARK CONJECTURE..."]]
     [:div {:class title-content}  "warning! may contain: code, art, beauty, logic"]]])
 
 (defn blog-title []
