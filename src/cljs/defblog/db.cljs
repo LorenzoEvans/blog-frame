@@ -2,4 +2,6 @@
 
 (def default-db
   {:name "re-frame"
-   :modal ""})
+   :modal ""
+   :articles {:title
+              :content}})

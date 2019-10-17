@@ -13,7 +13,7 @@
 
 
 (defn home-panel []
-  [:div.flex.flex-column.justify-between.h-100.bg-washed-green 
+  [:div.flex.flex-column.justify-between.h-100.bg-washed-green.w-100 
    [sidebar]
    [article-section]])
 

@@ -15,7 +15,7 @@
     width: 50%;
 }
 
-#app.div {
+#app.div  {
     height: 100vh;
 }
 
@@ -25,8 +25,12 @@
 }
 
 .bg-image {
-    background-image: url('./assets/geoms.jpeg');
-    width: 100%;
-    height: 400px;
+    background-image: url('./assets/purpbluepipe.jpeg');
+    width: auto;
+    height: 620px;
     background-size: contain;
+}
+
+.text-hover {
+    text-shadow: 1px 2px 1px #f113cc;
 }
