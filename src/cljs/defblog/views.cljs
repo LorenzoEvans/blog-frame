@@ -7,14 +7,14 @@
    [defblog.styles :refer [global-styles]]
    [defblog.layout :refer [sidebar
                            article-section
-                           labs-1-page]]))
+                           lambda-labs-gql]]))
 
 
 ;; home
 
 
 (defn home-panel []
-  [:div.flex.flex-column.justify-between.h-100.bg-washed-green.w-100 
+  [:div.flex.flex-column.justify-between.h-100.bg-washed-green.w-100
    [sidebar]
    [article-section]])
 
@@ -34,13 +34,14 @@
 ;   [:div.bg-washed-blue "hi"])
 ;; main
 
+(defn lambda-labs-graphql-1 []
+  [lambda-labs-gql])
 
 (defn- panels [panel-name]
   (case panel-name
     :home-panel [home-panel]
     :about-panel [about-panel]
-    :labs-1-page [labs-1-page]
-    [:div]))
+    :lambda-labs-graphql-1 [lambda-labs-graphql-1]))
 
 (defn show-panel [panel-name]
   [panels panel-name])

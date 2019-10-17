@@ -6,6 +6,7 @@
    [defblog.routes :as routes]
    [defblog.views :as views]
    [defblog.config :as config]
+   [defblog.subs :as subs]
    ))
 
 
