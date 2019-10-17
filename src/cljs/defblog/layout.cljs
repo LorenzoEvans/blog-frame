@@ -1,13 +1,17 @@
 (ns defblog.layout
-  (:require [defblog.styles :refer [anchor-style
-                                    nav-style
-                                    title-style
-                                    title-style-extra
-                                    title-content
-                                    home-div
-                                    ]]
-            [herb.core :refer [<class]]
-            [defblog.db :refer [default-db]]))
+  (:require 
+   [re-frame.core :as re-frame]
+   [defblog.styles :refer [anchor-style
+                           nav-style
+                           title-style
+                           title-style-extra
+                           title-content
+                           home-div
+                           ]]
+   [herb.core :refer [<class]]
+   [defblog.db :refer [default-db]]
+   [defblog.events :as events]
+   ))
 
 (defn about-anchor []
   [:a {:class anchor-style :href "/about"} "About"])
@@ -32,19 +36,37 @@
   )
 
 
+(defn full-article [title content exit]
+  [:article.mw6.center.bg-washed-red.br3.pa4-ns
+   [:div.tc
+    [:h1.f4 title]
+    [:hr.mw3.bb.bw1.b--washed-blue-10]]
+   [:p.lh-copy.measure.center.f6.black-70 content]
+   exit])
+
 (defn article [title content]
   [:article.mw6.center.bg-washed-red.br3.pa4-ns
    [:div.tc
     [:h1.f4 title]
     [:hr.mw3.bb.bw1.b--washed-blue-10]]
-   [:p.lh-copy.measure.center.f6.black-70 content]])
+   [:p.lh-copy.measure.center.f6.black-70.truncate content]])
+
+(defn labs-1-card []
+  [:a.w-50.w-25-l.h7-ns.link.overflow-hidden.ma2 {:on-click #(re-frame/dispatch [::events/set-active-panel :labs-1-page])}
+   [:div.grow (article (:labs-1 (get default-db :articles)) (:labs-1-prev (get default-db :articles)))]])
+
+
+(defn labs-1-page []
+   [:div.w-100.h-100 
+    (full-article (:labs-1 (get default-db :articles)) 
+                  (:labs-1-content (get default-db :articles))
+                  [:a.fw2.f4.ba.b--hot-pink.pa2.ma2 {:on-click #(re-frame/dispatch [::events/set-active-panel :home-panel])}
+                   "Back Home"])])
 
 (defn article-section []
   [:article.mv5.flex.justify-around.h-100.flex-row.flex-wrap.w-100
-   [:a.mw4.w-25-l.h7-ns.link.overflow-hidden.ma2
-    [:div.grow (article (:labs-1 (get default-db :articles)) (:labs-1-prev (get default-db :articles)))]]
    [:a.w-50.w-25-l.h7-ns.link.overflow-hidden.ma2
-    [:div.grow [article]]]
+    [:div.grow [labs-1-card]]]
    [:a.w-50.w-25-l.h7-ns.link.overflow-hidden.ma2
     [:div.grow [article]]]
    [:a.w-50.w-25-l.h7-ns.link.overflow-hidden.ma2

@@ -3,7 +3,7 @@
 (def default-db
   {:name "re-frame"
    :modal ""
-   :articles {:labs-1 "labs-1"
+   :articles {:labs-1 "Lambda Labs & GraphQL, Part I"
               
               :labs-1-prev "The majority of the work I've done this week has been on the back-end, defining the schema (s) or datamodel for the API and database, and setting up the necessary tools/logic to persist data."
               :labs-1-content

@@ -6,7 +6,8 @@
    [herb.core :refer [<class]]
    [defblog.styles :refer [global-styles]]
    [defblog.layout :refer [sidebar
-                           article-section]]))
+                           article-section
+                           labs-1-page]]))
 
 
 ;; home
@@ -29,8 +30,8 @@
     [:a {:href "/"}
      "go to Home Page"]]])
 
-(defn labs-1 []
-  [:div.bg-washed-blue "hi"])
+; (defn labs-1 []
+;   [:div.bg-washed-blue "hi"])
 ;; main
 
 
@@ -38,7 +39,7 @@
   (case panel-name
     :home-panel [home-panel]
     :about-panel [about-panel]
-    :labs-1 [labs-1]
+    :labs-1-page [labs-1-page]
     [:div]))
 
 (defn show-panel [panel-name]
