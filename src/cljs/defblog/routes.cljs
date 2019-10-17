@@ -32,7 +32,8 @@
   (defroute "/about" []
     (re-frame/dispatch [::events/set-active-panel :about-panel]))
 
-
+(defroute "/labs-1" []
+  (re-frame/dispatch [::events/set-active-panel :labs-1]))
   ;; --------------------
 
 
