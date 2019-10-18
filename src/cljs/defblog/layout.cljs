@@ -14,23 +14,6 @@
 (defn about-anchor []
   [:a {:class anchor-style :href "/about"} "About"])
 
-; (reg-event-db
-;  :modal
-;  (fn [db [_ data]]
-;    (assoc-in db [:modal] data)))
-
-; (reg-sub-raw
-;  :modal
-;  (fn [db _] (reaction (:modal @db))))
-
-; (defn my-awesome-modal-fn []
-;  [:button
-;   {:title "Click to show modal!"
-;    :on-click #(dispatch [:modal {:show? true
-;                                  :child [modal/hello]
-;                                  :size :small}])} "Show me the modal!"])
-
-
 (def content-store default-db)
 
 (defn article-card [title content]
@@ -41,17 +24,16 @@
    [:p.lh-copy.measure.center.f6.black-70.truncate content]])
 
 (defn full-article [title content exit]
-  [:article.mw6.center.bg-washed-red.br3.pa4-ns
+  [:article.center.bg-washed-red.br3.pa4-ns.w-100.h-100
    [:div.tc
     [:h1.f4 title]
-    [:hr.mw3.bb.bw1.b--washed-blue-10]]
-   [:p.lh-copy.measure.center.f6.black-70 content]
+    [:hr.bb.bw1.b--washed-blue-10]]
+   [:div.center.f6.black-70.w-75 content]
    exit])
 
 (defn labs-1-card []
-  [:a.w-50.w-25-l.h7-ns.link.overflow-hidden.ma2 {:href "/lambda-labs-graphql"
-                                                  :on-click (re-frame/dispatch [::events/set-active-panel :lambda-labs-graphql])}
-   [:div.grow
+  [:a.w-50.w-25-l.h7-ns.link.overflow-hidden.ma2 {:href "/lambda-labs-graphql-1"}
+   [:div
     (article-card (:labs-1 (get content-store :articles))
                   (:labs-1-prev (get content-store :articles)))]])
 
@@ -59,13 +41,13 @@
   [:div.w-100.h-100
    (full-article (:labs-1 (get content-store :articles))
                  (:labs-1-content (get content-store :articles))
-                 [:a.fw2.f4.ba.b--hot-pink.pa2.ma2 {:on-click #(re-frame/dispatch [::events/set-active-panel :home-panel])}
+                 [:a.fw2.f4.ba.b--hot-pink.pa2.ma2 {:href "/" :on-click #(re-frame/dispatch [::events/set-active-panel :home-panel])}
                   "Back Home"])])
 
 (defn article-section []
   [:article.mv5.flex.justify-around.h-100.flex-row.flex-wrap.w-100
    [:a.w-50.w-25-l.h7-ns.link.overflow-hidden.ma2
-    [:div.grow [labs-1-card]]]
+    [:div [labs-1-card]]]
    [:a.w-50.w-25-l.h7-ns.link.overflow-hidden.ma2
     [:div.grow [article-card]]]
    [:a.w-50.w-25-l.h7-ns.link.overflow-hidden.ma2

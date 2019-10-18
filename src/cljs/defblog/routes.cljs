@@ -9,13 +9,6 @@
    [defblog.events :as events]
    [pushy.core :as push]))
 
-; (defn hook-browser-navigation! []
-;   (doto (History.)
-;     (gevents/listen
-;      EventType/NAVIGATE
-;      (fn [event]
-;        (secretary/dispatch! (.-token event))))
-;     (.setEnabled true)))
 
 
 (defn hook-routes! []
@@ -32,8 +25,8 @@
   (defroute "/about" []
     (re-frame/dispatch [::events/set-active-panel :about-panel]))
 
-  ; (defroute "/lambda-labs-graphql-1" []
-  ;   (re-frame/dispatch [::events/set-active-panel :lambda-labs-graphql-1]))
+  (defroute "/lambda-labs-graphql-1" []
+    (re-frame/dispatch [::events/set-active-panel :lambda-labs-graphql-1]))
   ;; --------------------
 
 

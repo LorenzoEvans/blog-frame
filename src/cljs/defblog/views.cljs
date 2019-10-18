@@ -22,26 +22,18 @@
 ;; about
 
 
-(defn about-panel []
-  [:div
-   [:h1 "This is the About Page."]
-
-   [:div
-    [:a {:href "/"}
-     "go to Home Page"]]])
-
 ; (defn labs-1 []
 ;   [:div.bg-washed-blue "hi"])
 ;; main
 
-(defn lambda-labs-graphql-1 []
+(defn labs-full []
   [lambda-labs-gql])
 
 (defn- panels [panel-name]
   (case panel-name
     :home-panel [home-panel]
-    :about-panel [about-panel]
-    :lambda-labs-graphql-1 [lambda-labs-graphql-1]))
+    :lambda-labs-graphql-1 [labs-full]
+    [:div]))
 
 (defn show-panel [panel-name]
   [panels panel-name])
