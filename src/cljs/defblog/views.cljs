@@ -18,16 +18,12 @@
    [sidebar]
    [article-section]])
 
-
 ;; about
 
-
-; (defn labs-1 []
-;   [:div.bg-washed-blue "hi"])
 ;; main
 
 (defn labs-full []
-  [lambda-labs-gql])
+  [:div.h-100 [lambda-labs-gql]])
 
 (defn- panels [panel-name]
   (case panel-name

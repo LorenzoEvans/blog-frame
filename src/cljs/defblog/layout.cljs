@@ -24,11 +24,11 @@
    [:p.lh-copy.measure.center.f6.black-70.truncate content]])
 
 (defn full-article [title content exit]
-  [:article.center.bg-washed-red.br3.pa4-ns.w-100.h-100
+  [:article.center.bg-washed-red.br3.pa4-ns.w-100.h-100.flex.flex-column.justify-between
    [:div.tc
     [:h1.f4 title]
     [:hr.bb.bw1.b--washed-blue-10]]
-   [:div.center.f6.black-70.w-75 content]
+   [:div.center.f6.black-70.w-75.h-100.overflow-scroll content]
    exit])
 
 (defn labs-1-card []
@@ -41,12 +41,12 @@
   [:div.w-100.h-100
    (full-article (:labs-1 (get content-store :articles))
                  (:labs-1-content (get content-store :articles))
-                 [:a.fw2.f4.ba.b--hot-pink.pa2.ma2 {:href "/" :on-click #(re-frame/dispatch [::events/set-active-panel :home-panel])}
+                 [:a.fw2.f4.ba.b--hot-pink.pa2.ma4 {:href "/" :on-click #(re-frame/dispatch [::events/set-active-panel :home-panel])}
                   "Back Home"])])
 
 (defn article-section []
   [:article.mv5.flex.justify-around.h-100.flex-row.flex-wrap.w-100
-   [:a.w-50.w-25-l.h7-ns.link.overflow-hidden.ma2
+   [:a.w-50.w-25-l.link.overflow-hidden.ma2
     [:div [labs-1-card]]]
    [:a.w-50.w-25-l.h7-ns.link.overflow-hidden.ma2
     [:div.grow [article-card]]]

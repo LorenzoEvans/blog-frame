@@ -1,0 +1,35 @@
+.bg-img {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.over-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.content-section {
+    width: 50%;
+}
+
+#app.div  {
+    height: 100vh;
+}
+
+.maybe-sheep:hover {
+    border: #FFDFDF;
+
+}
+
+.bg-image {
+    background-image: url('./assets/purpbluepipe.jpeg');
+    width: auto;
+    height: 620px;
+    background-size: contain;
+}
+
+.text-hover {
+    text-shadow: 2px 2px 1px #f113cc;
+}
