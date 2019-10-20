@@ -14,9 +14,9 @@
 
 
 (defn home-panel []
-  [:div.flex.flex-column.justify-between.h-100.w-100.bg-image
+  [:div.flex.flex-column.justify-between.bg-image
    [sidebar]
-   [article-section]])
+   ])
 
 ;; about
 

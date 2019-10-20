@@ -15,7 +15,7 @@
 
 (def global-styles "vh-100 flex flex-row w-100 over-div")
 
-(def anchor-style "grow avenir h3 tc hover-animate hover-dark-pink fw4 f5 no-underline washed-red ba bw1 br2 pa1 w-25 ")
+(def anchor-style "grow avenir h2 tc hover-animate hover-dark-pink fw4 f5 no-underline washed-red ba bw1 br2 w-20 ")
 
 
 (def article-card-style "w-50 w-25-l h7-ns link overflow-hidden ma2 shadow-2")

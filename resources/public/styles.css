@@ -5,17 +5,10 @@
     top: 0;
 }
 
-.over-div {
-    display: flex;
-    flex-direction: row;
-}
-
-.content-section {
-    width: 50%;
-}
 
 #app.div  {
     height: 100vh;
+    width: 100%;
 }
 
 .maybe-sheep:hover {
@@ -25,8 +18,9 @@
 
 .bg-image {
     background-image: url(../assets/purpbluepipe.jpeg) ;
-    width: 100%;
-    height: 650px;
+    width: auto;
+    max-width: 100%;
+    height: 100%;
     background-size: contain;
     background-repeat: no-repeat;
 }
