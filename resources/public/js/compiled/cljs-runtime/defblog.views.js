@@ -12,9 +12,9 @@ defblog.views.labs_full = (function defblog$views$labs_full(){
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.h-100","div.h-100",1804561247),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [defblog.layout.lambda_labs_gql], null)], null);
 });
 defblog.views.panels = (function defblog$views$panels(panel_name){
-var G__44263 = panel_name;
-var G__44263__$1 = (((G__44263 instanceof cljs.core.Keyword))?G__44263.fqn:null);
-switch (G__44263__$1) {
+var G__45386 = panel_name;
+var G__45386__$1 = (((G__45386 instanceof cljs.core.Keyword))?G__45386.fqn:null);
+switch (G__45386__$1) {
 case "home-panel":
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [defblog.views.home_panel], null);
 
@@ -32,8 +32,8 @@ defblog.views.show_panel = (function defblog$views$show_panel(panel_name){
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [defblog.views.panels,panel_name], null);
 });
 defblog.views.main_panel = (function defblog$views$main_panel(){
-var active_panel = (function (){var G__44264 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.subs","active-panel","defblog.subs/active-panel",-382304736)], null);
-return (re_frame.core.subscribe.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.subscribe.cljs$core$IFn$_invoke$arity$1(G__44264) : re_frame.core.subscribe.call(null,G__44264));
+var active_panel = (function (){var G__45387 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.subs","active-panel","defblog.subs/active-panel",-382304736)], null);
+return (re_frame.core.subscribe.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.subscribe.cljs$core$IFn$_invoke$arity$1(G__45387) : re_frame.core.subscribe.call(null,G__45387));
 })();
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [defblog.views.show_panel,cljs.core.deref(active_panel)], null);
 });

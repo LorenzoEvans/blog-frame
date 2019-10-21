@@ -3,12 +3,12 @@
 (def default-db
   {:name "re-frame"
    :modal ""
-   :articles {:labs-1 "Lambda Labs & GraphQL, Part I"
-              
-              :labs-1-prev "The majority of the work I've done this week has been on the back-end, defining the schema (s) or datamodel for the API and database, and setting up the necessary tools/logic to persist data."
-              :labs-1-content
-              "Labs: Week 0.
-Part One: Individual Accomplishments.
+   :articles 
+   {:labs-1 "Lambda Labs & GraphQL, Part I"
+
+    :labs-1-prev "The majority of the work I've done this week has been on the back-end, defining the schema (s) or datamodel for the API and database, and setting up the necessary tools/logic to persist data."
+    :labs-1-content
+    "Labs: Week 0. Part One: Individual Accomplishments.
 
 The majority of the work I've done this week has been on the back-end, defining the schema(s) or datamodel for the API and database, and setting up the necessary tools/logic to persist data. The hardest part is probably that, due to the nature of GraphQL and Prisma, using these tools actually requires a paradigm shift with regards to how to design API's. The process of developing, refactoring and reasoning about your is vastly different from those process when using Node, Express and SQL. GraphQL is where the API is defined, and Prisma is the layer where your API, the data models and CRUD operations are exposed to your database, sometimes referred to as a Data Access Layer.
 Detailed Analysis:
@@ -32,6 +32,4 @@ The third and final step is to run prisma deploy, and Prisma takes it from there
 
 Part Two: Milestone Reflections.
 
-My major contribution to the project, with regards to the specs, was being objective about the trade-offs between using either of the stacks that we were choosing between. I spent a lot of time looking at the documentation, and even the specifications of the tools, and really tried to be honest about what I felt the benefits and drawbacks of either stack were, as opposed to saying this tool, or programming language or front end library was bad. That research lead to me being in favor of the stack we chose, because the project specifications present a site that looks much more featured than Medium, or Dev.to, or Stack Overflow, and the nature of those features were going to require us to speak to our database in un-predictable, dynamic ways. Given that, I felt like the flexibility of all layers of the stack we chose would be most beneficial in terms of both providing that functionality to users, and not being to complex or tedious to implement.
-
-"}})
+My major contribution to the project, with regards to the specs, was being objective about the trade-offs between using either of the stacks that we were choosing between. I spent a lot of time looking at the documentation, and even the specifications of the tools, and really tried to be honest about what I felt the benefits and drawbacks of either stack were, as opposed to saying this tool, or programming language or front end library was bad. That research lead to me being in favor of the stack we chose, because the project specifications present a site that looks much more featured than Medium, or Dev.to, or Stack Overflow, and the nature of those features were going to require us to speak to our database in un-predictable, dynamic ways. Given that, I felt like the flexibility of all layers of the stack we chose would be most beneficial in terms of both providing that functionality to users, and not being to complex or tedious to implement."}})

@@ -24,15 +24,72 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
-/* 
+
 .overlay-gradient {
-    background: linear-gradient(230deg, rgba(196, 238, 243, 0.137), rgba(224, 224, 224, 0.205), rgba(241, 217, 235, 0.205), rgba(255, 222, 247, 0.295));
+    background: linear-gradient(230deg, rgba(69, 189, 202, 0.137), rgba(184, 37, 176, 0.205), rgba(241, 217, 235, 0.205), rgba(255, 222, 247, 0.295));
     width: 100%;
     height: 100%;
     background-size: cover;
-} */
+}
 
 .text-hover {
     color: rgb(161, 213, 215) ;
     text-shadow: 5px 5px 3px #000000;
 }
+
+.anchor-hover:hover {
+    text-shadow: 5px 5px 2px #000000;
+} 
+
+@keyframes fontbulger {
+    0% {
+      font-size: 5px;
+    }
+    10% {
+      font-size: 10px;
+      text-shadow: 0px 0px 2px #FFDFDF;
+      color: blueviolet
+    }
+    20% {
+      font-size: 15px;
+      color: #FFDFDF;
+    }
+
+    30% {
+        font-size: 20px;
+        color: rgb(223, 251, 255);
+    }
+
+    40% {
+        font-size: 25px;
+        color: rgb(222, 105, 233);
+    }
+
+    50% {
+        font-size: 30px;
+    }
+
+    60% {
+        font-size: 35px;
+    }
+  
+    70% {
+        font-size: 30px;
+    }
+  
+    80% {
+        font-size: 25px;
+    }
+  
+    90% {
+          font-size: 20px;
+    }
+
+    100% {
+        font-size: 16px;
+    }   
+  }
+  
+  .move {
+     animation: fontbulger 2s steps(10);
+  }
