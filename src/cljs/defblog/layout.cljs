@@ -6,10 +6,9 @@
                            title-style-extra
                            title-content
                            article-card-style
+                           title-quote
                            article-section-style]]
    [defblog.db :refer [default-db]]))
-
-(def content-store (get-in default-db [:content]))
 
 (defn article-card [content-store]
   [:div.w-100
@@ -23,17 +22,14 @@
 
 (defn article-section []
   [:article.w-100 {:class article-section-style}
-   [article-card content-store]])
+   [article-card (get-in default-db [:content])]])
 
 (defn blog-title-content []
   [:div {:class title-style}
-   [:span.tracked-mega-ns {:class title-style-extra} "Maybe Black Sheep"
+   [:section.tracked-mega-ns {:class title-style-extra} "Maybe Black Sheep"
     [:div.tracked-mega-ns.mt1 {:class title-content} "By : : 0xLE"]
-    [:div.pa2.bw1.pa2.h4.avenir.w-100 [:span.o-80.f5.fw3.pa3.ma2.text-hover.tracked  "ANARCHITECTURE, AN ORCISH TESTER, AN ARC INSPECTION, A HARP CONVENTION, AN ARK LIT PRESSURE, AN ORBIT GESTURE..."]]
-    [:div.w-100 {:class title-content} "warning! may contain: code, art, beauty, logic"]
-    [:div
-     [:a {:href "#/about"}
-      "go to About Page"]]]])
+    [:div {:class title-quote} "ANARCHITECTURE, AN ORCISH TESTER, AN ARC INSPECTION, A HARP CONVENTION, AN ARK LIT PRESSURE, AN ORBIT GESTURE..."]]
+    [:div.w-100 {:class title-content} "warning! may contain: code, art, beauty, logic"]])
 
 (defn blog-title []
   [:header
@@ -43,17 +39,17 @@
       [:div.tr.pa3.flex.flex-column-reverse.w-100
        [blog-title-content]
        [:div.flex.flex-row.flex-wrap.justify-between.w-100
+        [:a.anchor-hover {:class anchor-style :href "#/"} "About"]
         [:a.anchor-hover {:class anchor-style :href ""} "Github"]
-        [:a.anchor-hover {:class anchor-style :href "/"} "LinkedIn"]
         [:a.anchor-hover {:class anchor-style :href "/"} "Twitter"]
         [:a.anchor-hover {:class anchor-style :href "/"} "Misc"]]]]]
     [article-section]]])
 
-(defn side-bar []
-  [:div.w-100 {:class home-div}
+(defn home-page []
+  [:div.w-100 
    [:nav.w-100 {:class nav-style}]
    [blog-title]])
 
-(defn sidebar  []
+(defn homepage  []
   [:div.flex.flex-column.justify-center.content-center.w-100
-   [side-bar]])
+   [home-page]])
