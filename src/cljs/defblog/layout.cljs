@@ -5,35 +5,32 @@
                            title-style
                            title-style-extra
                            title-content
+                           title-warning
                            article-card-style
                            title-quote
                            article-section-style]]
    [defblog.db :refer [default-db]]))
 
 (defn article-card [content-store]
-  [:div.w-100
+  [:div.overflow-scroll {:class article-section-style}
    (for [item content-store]
-     ^{:key (item :title)}[:div {:class article-card-style}
-      [:a.h7-ns.overflow-hidden.ma2.no-underline.link.navy
-       {:href (item :url)}]
-      [:span.br3.pa2-ns.flex.justify-center.flex-column.items-center
-       [:h1.f4.washed-red.items-center (item :title)]
-       [:p.f5.black-70.truncate.near-white.w-70 (item :content)]]])])
+     ^{:key (item :title)} [:div.overlay-gradient-2.hover-bg-near-white {:class article-card-style}
+                            [:a.overflow-hidden.no-underline.fw5.link.f3.near-black.items-center.grow.hover-silver.hover-dark-red {:href (item :url)} (item :title)]
+                            [:p.f5.black-70.near-black.fw5.w-80.bb.b--black.bw1 (item :prev)]])])
 
 (defn article-section []
-  [:article.w-100 {:class article-section-style}
-   [article-card (get-in default-db [:content])]])
+  [article-card (get-in default-db [:content])])
 
 (defn blog-title-content []
-  [:div {:class title-style}
-   [:section.tracked-mega-ns {:class title-style-extra} "Maybe Black Sheep"
+  [:div.overlay-gradient {:class title-style}
+   [:section.tracked-mega-ns.text-hover {:class title-style-extra} "Maybe Black Sheep"
     [:div.tracked-mega-ns.mt1 {:class title-content} "By : : 0xLE"]
-    [:div {:class title-quote} "ANARCHITECTURE, AN ORCISH TESTER, AN ARC INSPECTION, A HARP CONVENTION, AN ARK LIT PRESSURE, AN ORBIT GESTURE..."]]
-    [:div.w-100 {:class title-content} "warning! may contain: code, art, beauty, logic"]])
+    [:div.text-hover-2 {:class title-quote} "ANARCHITECTURE, AN ORCISH TESTER, AN ARC INSPECTION, A HARP CONVENTION, AN ARK LIT PRESSURE, AN ORBIT GESTURE..."]]
+   [:div.w-100 {:class title-warning} "warning! may contain: code, art, beauty, logic"]])
 
 (defn blog-title []
-  [:header
-   [:div.cover.bg-left.bg-center-l.bg-image.w-100
+  [:div.cover.bg-left.bg-center-l.bg-image.w-100
+   [:header
     [:div.pb5.pb6-m.pb7-l.w-100
      [:nav.dt.w-100.center.flex.flex-column.justify-center.w-100
       [:div.tr.pa3.flex.flex-column-reverse.w-100
@@ -46,7 +43,7 @@
     [article-section]]])
 
 (defn home-page []
-  [:div.w-100 
+  [:div.w-100
    [:nav.w-100 {:class nav-style}]
    [blog-title]])
 
