@@ -23,7 +23,6 @@
 ;; main
 
 
-
 (defn- panels [panel-name]
   (case panel-name
     :home-panel [home-panel]
