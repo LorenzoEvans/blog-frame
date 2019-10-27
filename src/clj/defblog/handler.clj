@@ -6,9 +6,7 @@
    [ring.middleware.reload :refer [wrap-reload]]
    [shadow.http.push-state :as push-state]))
 
-(defroutes routes
-  (GET "/" [] (resource-response "index.html" {:root "public"}))
-  (resources "/"))
+(defroutes routes "")
 
 (def dev-handler (-> #'routes wrap-reload push-state/handle))
 
