@@ -9,13 +9,18 @@
                            article-card-style
                            title-quote
                            article-section-style]]
-   [defblog.db :refer [default-db]]))
+   [defblog.db :refer [default-db]]
+   [defblog.events :as events]
+   [re-frame.core :as re-frame]))
 
 (defn article-card [content-store]
   [:div.overflow-scroll {:class article-section-style}
    (for [item content-store]
      ^{:key (item :title)} [:div.overlay-gradient-2.hover-bg-near-white {:class article-card-style}
-                            [:a.overflow-hidden.no-underline.fw5.link.f3.near-black.items-center.grow.hover-silver.hover-dark-red {:href (item :url)} (item :title)]
+                            [:a.overflow-hidden.no-underline.fw5.link.f3.near-black.items-center.grow.hover-silver.hover-dark-red
+                             {:href (item :url)
+                              }
+                             (item :title)]
                             [:p.f5.black-70.near-black.fw5.w-80.bb.b--black.bw1 (item :prev)]])])
 
 (defn article-section []
@@ -35,7 +40,7 @@
      [:nav.dt.w-100.center.flex.flex-column.justify-center.w-100
       [:div.tr.pa3.flex.flex-column-reverse.w-100
        [blog-title-content]
-       [:div.flex.flex-row.flex-wrap.justify-between.w-100
+       [:div.flex.flex-row.flex-wrap.justify-between
         [:a.anchor-hover {:class anchor-style :href "#/"} "About"]
         [:a.anchor-hover {:class anchor-style :href ""} "Github"]
         [:a.anchor-hover {:class anchor-style :href "/"} "Twitter"]

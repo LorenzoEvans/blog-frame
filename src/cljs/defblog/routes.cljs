@@ -26,20 +26,20 @@
 ; (def url-for (partial bidi/path-for routes))
 
 
-(defn hook-browser-navigation! []
-  (doto (History.)
-    (gevents/listen
-     EventType/NAVIGATE
-     (fn [event]
-       (secretary/dispatch! (.-token event))))
-    (.setEnabled true)))
+; (defn hook-browser-navigation! []
+;   (doto (History.)
+;     (gevents/listen
+;      EventType/NAVIGATE
+;      (fn [event]
+;        (secretary/dispatch! (.-token event))))
+;     (.setEnabled true)))
 
 (defn hook-routes! []
   (def history (push/pushy secretary/dispatch! (fn [x] (when (secretary/locate-route x) x))))
   (push/start! history))
 
 (defn app-routes []
-  (secretary/set-config! :prefix "#")
+  (secretary/set-config! :prefix "/")
   ;; --------------------
   ;; define routes here
   (defroute "/" []
@@ -48,9 +48,9 @@
   (defroute "/about" []
     (re-frame/dispatch [::events/set-active-panel :about-panel]))
 
-  (defroute "/lambda-labs-graphql-1" []
-    (re-frame/dispatch [::events/set-active-panel :lambda-labs-graphql-1]))
+  (defroute "/lambda-labs-gql-1" []
+    (re-frame/dispatch [::events/set-active-panel :lambda-labs-gql-1]))
   ; --------------------
 
 
-  (hook-browser-navigation!))
+  (hook-routes!))

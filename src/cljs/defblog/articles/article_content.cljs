@@ -1,31 +1,29 @@
 (ns defblog.articles.article_content)
 
 (defn labs-article-data []
-  [:article {:id "0650bfe6-05b9-4a84-a528-09d1f5a13b4f" :class "page serif"} "\t\t\t\t"
+  [:div "\t\t\t\t"
    [:header "\t\t\t\t\t"
-    [:h1 {:class "page-title"} "Lambda Labs &amp; GraphQL, Part I"] "\t\t\t\t"] "\t\t\t\t"
+    [:h1 {:class "page-title"} "Lambda Labs & GraphQL, Part I"] "\t\t\t\t"] "\t\t\t\t"
    [:div {:class  "page-body"} "\t\t\t\t\t" 
-    [:h2 {:id "3d5f9c70-46c6-454f-8b8e-e57bfb2e805f"   } "Part One: Individual Accomplishments."] "\t\t\t\t\t"
-    [:p {:id "9d19ed9c-6f59-4218-953e-635e303bf333"    } "This sprint was an experience that taught me both how much I've learned, and how strong my skills are, but also how much I have to learn, and what areas I'm weak in."]
-    [:p {:id "2cbe34da-56be-4cbe-a3a5-045e3c4a2104",   } "Some of these areas extend beyond software into communication, conflict resolution, and explaining my own thought process. "]
-    [:p {:id "a5c377ed-85db-416d-a029-ab6ff1e4841f",   } "Some of the biggest difficulties were conforming to the rules of various 3rd party services, such as Google and Github, within the confines of Firebase. "]
-    [:p {:id "b65de5fb-0a54-406a-a2a2-83cbf0291ed2",   } "Twitter, Google, and Github all return JSON user-objects that are shaped differently, which meant we had to effectively search these objects and find the pieces of data we needed to feed back to Firebase, and all of them don't necessarily return the same information. "]
-    [:p {:id "57b2d35c-a577-4915-a13f-58c3150843dc",   } "Another difficulty was the immense size of Firebase functionality, as they offer services for iOS, Web, Android, Node, etc, and each of these are complex tools, and the depth of the documentation keeps in kind with the tools. "]
-    [:p {:id "881ed3ee-ad3a-48bb-ba76-9abd6dd2643b",   } "It can become difficult at times, to keep track of where you've been, what you've looked at, what you actually need, or what you were even looking for in the first place. "]
-    [:p {:id "1ea71e7b-b56a-437b-a2fb-2c4d739228a1",   } "That being said, there's absolutely nothing like the reward of pulling off a task, and serving up a feature right in the nick of time, that you've been working on for two weeks. So, nonetheless, I signed up for access to Twitter's API as a dev, and was able to implement that 3rd party feature, along with implementing Google sign in."]
-    [:div {:id "348023e5-11a6-40c9-a0cf-9af2fb126fab", :class "column-list"}
-     [:div {:id "6001d4c9-2cd3-4f55-b2ef-5982964c1052", 
-                                                        :class  "column"}
-      [:h2 {:id "ea82d2b3-d919-4781-9f95-4dcec7df59a2", } "Detailed Analysis:"]
-      [:h3 {:id "4dd8d1ba-2e9d-46cc-9def-172abe766312", }
-       [:mark {:class  "highlight-brown"}
+    [:h2  "Part One: Individual Accomplishments."] "\t\t\t\t\t"
+    [:p  "This sprint was an experience that taught me both how much I've learned, and how strong my skills are, but also how much I have to learn, and what areas I'm weak in."]
+    [:p  "Some of these areas extend beyond software into communication, conflict resolution, and explaining my own thought process. "]
+    [:p  "Some of the biggest difficulties were conforming to the rules of various 3rd party services, such as Google and Github, within the confines of Firebase. "]
+    [:p  "Twitter, Google, and Github all return JSON user-objects that are shaped differently, which meant we had to effectively search these objects and find the pieces of data we needed to feed back to Firebase, and all of them don't necessarily return the same information. "]
+    [:p  "Another difficulty was the immense size of Firebase functionality, as they offer services for iOS, Web, Android, Node, etc, and each of these are complex tools, and the depth of the documentation keeps in kind with the tools. "]
+    [:p  "It can become difficult at times, to keep track of where you've been, what you've looked at, what you actually need, or what you were even looking for in the first place. "]
+    [:p  "That being said, there's absolutely nothing like the reward of pulling off a task, and serving up a feature right in the nick of time, that you've been working on for two weeks. So, nonetheless, I signed up for access to Twitter's API as a dev, and was able to implement that 3rd party feature, along with implementing Google sign in."]
+    [:div 
+     [:div 
+      [:h2  "Detailed Analysis:"]
+      [:h3 
+       [:mark 
         [:em "Ticket: Implementing 3rd Party O-Auth."]]]
-      [:figure {:id "8fdae643-7e13-46b3-9c70-f29080eda204"}
+      [:figure
        [:div {:class "bookmark source"}
         [:a {:href "https://trello.com/c/J6kUM2HU"} "Trello"]
-        [:br]
         [:a {:class  "bookmark-href", :href "https://trello.com/c/J6kUM2HU"} "https://trello.com/c/J6kUM2HU"]]]
-      [:p {:id "eb7fb1a0-e312-412d-8954-c96a728cf5ae"} "All in all, the third party login button you see on our site, is a React component that renders a single button, which then calls an onSubmit listener, which is a function that contains all of the necessary firebase logic for the particular method an individual chose to sign in."]
+      [:p  "All in all, the third party login button you see on our site, is a React component that renders a single button, which then calls an onSubmit listener, which is a function that contains all of the necessary firebase logic for the particular method an individual chose to sign in."]
       [:figure {:id "ba94207a-8ae5-42b2-a466-69914bc56885", :class  "image"}
        [:a {:href "Lambda Labs GraphQL Part I/ratemydiy.png"}
         [:img.w-50.h-50 {:src "/assets/ratemydiy.png"}]]]

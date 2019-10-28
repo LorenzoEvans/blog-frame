@@ -2,7 +2,8 @@
   (:require
    [re-frame.core :as re-frame]
    [defblog.subs :as subs]
-   [defblog.layout :refer [homepage]]))
+   [defblog.layout :refer [homepage]]
+   [defblog.articles.article_content :refer [labs-article-data]]))
 
 (defn about-panel []
   [:div
@@ -27,6 +28,7 @@
   (case panel-name
     :home-panel [home-panel]
     :about-panel [about-panel]
+    :lambda-labs-gql-1 [labs-article-data]
     [:div]))
 
 (defn show-panel [panel-name]
