@@ -2,12 +2,13 @@
 
 (def default-db
   {:name "re-frame"
+   :active-page :home
    :content [{:title "Lambda Labs & GraphQL, Part I" :prev "Taught me how to walk this graph, she told me to walk this graph..."
               :url "/lambda-labs-gql-1"
               :panel-name "lambda-labs-gql-1"}
              {:title "Lambda Labs & Firebase, Part II" :prev "A quick but vivid journey into the world of O-Auth."
               :url "/lambda-labs-2-firebase"}
-             {:title "Lambda Labs & O-Auth Part II" :prev "A quick but vivid journey into the world of O-Auth."
+             {:title "Lambda Labs & O-Auth Part III" :prev "This is like the previous article, but like, it's also totally not bro."
               :url "lambda-labs-3-firebase"}
              {:title "An Abridged History of Linux" :prev "How one rebellious Finnish kid redefined an OS."
               :url "#/hist-of-linux"}

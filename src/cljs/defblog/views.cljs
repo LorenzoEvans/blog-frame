@@ -5,6 +5,9 @@
    [defblog.layout :refer [homepage]]
    [defblog.articles.article_content :refer [labs-article-data]]))
 
+(def date
+  (fn [date] (.toDateString (js/Date. date))))
+
 (defn about-panel []
   [:div
    [:h1 "This is the About Page."]
@@ -23,12 +26,15 @@
 
 ;; main
 
+(defn labs-article []
+  [:div
+   [labs-article-data]])
 
 (defn- panels [panel-name]
   (case panel-name
     :home-panel [home-panel]
     :about-panel [about-panel]
-    :lambda-labs-gql-1 [labs-article-data]
+    :lambda-labs-gql-1 [labs-article]
     [:div]))
 
 (defn show-panel [panel-name]

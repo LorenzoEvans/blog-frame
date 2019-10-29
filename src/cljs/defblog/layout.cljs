@@ -19,7 +19,7 @@
      ^{:key (item :title)} [:div.overlay-gradient-2.hover-bg-near-white {:class article-card-style}
                             [:a.overflow-hidden.no-underline.fw5.link.f3.near-black.items-center.grow.hover-silver.hover-dark-red
                              {:href (item :url)
-                              }
+                              :on-click (re-frame/dispatch [:events/set-active-panel :lambda-labs-gql-1])}
                              (item :title)]
                             [:p.f5.black-70.near-black.fw5.w-80.bb.b--black.bw1 (item :prev)]])])
 
