@@ -20,10 +20,10 @@ defblog.core.mount_root = (function defblog$core$mount_root(){
 return reagent.core.render.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [defblog.views.main_panel], null),document.getElementById("app"));
 });
 defblog.core.init = (function defblog$core$init(){
-(defblog.routes.app_routes.cljs$core$IFn$_invoke$arity$0 ? defblog.routes.app_routes.cljs$core$IFn$_invoke$arity$0() : defblog.routes.app_routes.call(null));
+defblog.routes.start_BANG_();
 
-var G__44328_44329 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.events","initialize-db","defblog.events/initialize-db",1258958176)], null);
-(re_frame.core.dispatch_sync.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.dispatch_sync.cljs$core$IFn$_invoke$arity$1(G__44328_44329) : re_frame.core.dispatch_sync.call(null,G__44328_44329));
+var G__44240_44241 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.events","initialize-db","defblog.events/initialize-db",1258958176)], null);
+(re_frame.core.dispatch_sync.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.dispatch_sync.cljs$core$IFn$_invoke$arity$1(G__44240_44241) : re_frame.core.dispatch_sync.call(null,G__44240_44241));
 
 defblog.core.dev_setup();
 

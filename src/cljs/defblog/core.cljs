@@ -3,7 +3,7 @@
    [reagent.core :as reagent]
    [re-frame.core :as re-frame]
    [defblog.events :as events]
-   [defblog.routes :as routes]
+   [defblog.routes :as routes :refer [start!]]
    [defblog.views :as views]
    [defblog.config :as config]
    [defblog.subs :as subs]))
@@ -18,7 +18,7 @@
                   (.getElementById js/document "app")))
 
 (defn init []
-  (routes/app-routes)
+  (start!)
   (re-frame/dispatch-sync [::events/initialize-db])
   (dev-setup)
   (mount-root))

@@ -8,7 +8,19 @@
  (fn [_ _]
    db/default-db))
 
-(re-frame/reg-event-db
+(re-frame/reg-event-fx
  :set-active-panel
  (fn [{:keys [db]} [_ {:keys [page slug]}]]
-   (assoc db :active-panel active-panel)))
+   (let [cur-page (assoc db :active-page page)]
+     (case page
+       :home {:db cur-page
+              :dispatch-n [[:get-articles]]}
+       :article {:db (assoc cur-page :active-article slug)
+                 :dispatch-n [[:get-articles]]}))))
+
+(re-frame/reg-event-db
+ :set-active-article
+ (fn [{:keys [db]} [_ slug]]
+   {:db (assoc db :active-article slug)}))
+
+; (re-frame/reg-event-fx)
