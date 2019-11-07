@@ -3,6 +3,7 @@
    [reagent.core :as reagent]
    [re-frame.core :as re-frame]
    [defblog.events :as events]
+   [defblog.layout]
    [defblog.routes :as routes :refer [start!]]
    [defblog.views :as views]
    [defblog.config :as config]

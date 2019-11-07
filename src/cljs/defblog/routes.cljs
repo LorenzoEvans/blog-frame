@@ -7,12 +7,12 @@
    [pushy.core :as push]))
 
 ; a route is just a vector with a pattern and result
-(def routes ["/" {"" :home
+(def routes ["/" {"/" :home
                   "about" :about
                   "article/" {[:slug] :article}}])
 ; implements bi-directional routing, for forward and backward nav in browser.
 (def history
-  (let [dispatch #(dispatch [:set-active-page
+  (let [dispatch #(dispatch [:set-active-panel
                              {:page (:handler %) :slug (get-in % [:route-params :slug])}])
         match #(bidi/match-route routes %)]
     (push/pushy dispatch match)))

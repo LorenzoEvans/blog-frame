@@ -13,15 +13,14 @@
    [defblog.events :as events]
    [re-frame.core :as re-frame]))
 
-(defn article-card [content-store]
+(defn article-card [{:keys [title url prev]}]
   [:div.overflow-scroll {:class article-section-style}
-   (for [item content-store]
-     ^{:key (item :title)} [:div.overlay-gradient-2.hover-bg-near-white {:class article-card-style}
-                            [:a.overflow-hidden.no-underline.fw5.link.f3.near-black.items-center.grow.hover-silver.hover-dark-red
-                             {:href (item :url)
-                              :on-click (re-frame/dispatch [:events/set-active-panel :lambda-labs-gql-1])}
-                             (item :title)]
-                            [:p.f5.black-70.near-black.fw5.w-80.bb.b--black.bw1 (item :prev)]])])
+   [:div.overlay-gradient-2.hover-bg-near-white {:class article-card-style}
+    [:a.overflow-hidden.no-underline.fw5.link.f3.near-black.items-center.grow.hover-silver.hover-dark-red
+     {:href url
+      :on-click #(re-frame/dispatch [:events/set-active-panel :lambda-labs-gql-1])}
+     title]
+    [:p.f5.black-70.near-black.fw5.w-80.bb.b--black.bw1 prev]]])
 
 (defn article-section []
   [article-card (get-in default-db [:content])])

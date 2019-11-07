@@ -23,4 +23,7 @@
  (fn [{:keys [db]} [_ slug]]
    {:db (assoc db :active-article slug)}))
 
-; (re-frame/reg-event-fx)
+(re-frame/reg-event-db
+ :get-articles
+ (fn [{:keys [db]} [_ content]]
+   content))

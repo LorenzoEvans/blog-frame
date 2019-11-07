@@ -3,6 +3,7 @@ goog.require('cljs.core');
 goog.require('reagent.core');
 goog.require('re_frame.core');
 goog.require('defblog.events');
+goog.require('defblog.layout');
 goog.require('defblog.routes');
 goog.require('defblog.views');
 goog.require('defblog.config');
@@ -22,8 +23,8 @@ return reagent.core.render.cljs$core$IFn$_invoke$arity$2(new cljs.core.Persisten
 defblog.core.init = (function defblog$core$init(){
 defblog.routes.start_BANG_();
 
-var G__44240_44241 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.events","initialize-db","defblog.events/initialize-db",1258958176)], null);
-(re_frame.core.dispatch_sync.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.dispatch_sync.cljs$core$IFn$_invoke$arity$1(G__44240_44241) : re_frame.core.dispatch_sync.call(null,G__44240_44241));
+var G__44359_44360 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.events","initialize-db","defblog.events/initialize-db",1258958176)], null);
+(re_frame.core.dispatch_sync.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.dispatch_sync.cljs$core$IFn$_invoke$arity$1(G__44359_44360) : re_frame.core.dispatch_sync.call(null,G__44359_44360));
 
 defblog.core.dev_setup();
 

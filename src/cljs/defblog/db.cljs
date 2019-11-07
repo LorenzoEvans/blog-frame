@@ -3,7 +3,7 @@
 (def default-db
   {:name "re-frame"
    :navigation {:active-page :home
-                :active-nav :home
+                :active-nav :homez
                 :active-article nil}
 
    :content [{:title "Lambda Labs & GraphQL, Part I" :prev "Taught me how to walk this graph, she told me to walk this graph..."
