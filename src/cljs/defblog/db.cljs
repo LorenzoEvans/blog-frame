@@ -2,7 +2,10 @@
 
 (def default-db
   {:name "re-frame"
-   :active-page :home
+   :navigation {:active-page :home
+                :active-nav :home
+                :active-article nil}
+
    :content [{:title "Lambda Labs & GraphQL, Part I" :prev "Taught me how to walk this graph, she told me to walk this graph..."
               :url "/lambda-labs-gql-1"
               :panel-name "lambda-labs-gql-1"}

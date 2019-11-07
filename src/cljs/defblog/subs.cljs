@@ -11,3 +11,8 @@
  ::active-panel
  (fn [db _]
    (:active-panel db)))
+
+(re-frame/reg-sub 
+  :active-nav
+  (fn [db _]
+    (get-in db [:nav :active-nav])))
