@@ -22,8 +22,8 @@ return reagent.core.render.cljs$core$IFn$_invoke$arity$2(new cljs.core.Persisten
 defblog.core.init = (function defblog$core$init(){
 defblog.routes.app_routes();
 
-var G__45644_45645 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.events","initialize-db","defblog.events/initialize-db",1258958176)], null);
-(re_frame.core.dispatch_sync.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.dispatch_sync.cljs$core$IFn$_invoke$arity$1(G__45644_45645) : re_frame.core.dispatch_sync.call(null,G__45644_45645));
+var G__44194_44195 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.events","initialize-db","defblog.events/initialize-db",1258958176)], null);
+(re_frame.core.dispatch_sync.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.dispatch_sync.cljs$core$IFn$_invoke$arity$1(G__44194_44195) : re_frame.core.dispatch_sync.call(null,G__44194_44195));
 
 defblog.core.dev_setup();
 
