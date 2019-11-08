@@ -18,8 +18,13 @@
    (for [item content-store]
      ^{:key (item :title)} [:div.overlay-gradient-2.hover-bg-near-white {:class article-card-style}
                             [:a.overflow-hidden.no-underline.fw5.link.f3.near-black.items-center.grow.hover-silver.hover-dark-red
+<<<<<<< HEAD
                              {:href (item :url)
                               :on-click (re-frame/dispatch [:events/set-active-panel :lambda-labs-gql-1])}
+=======
+                             {:href (item :url)}
+
+>>>>>>> development
                              (item :title)]
                             [:p.f5.black-70.near-black.fw5.w-80.bb.b--black.bw1 (item :prev)]])])
 
@@ -53,5 +58,5 @@
    [blog-title]])
 
 (defn homepage  []
-  [:div.flex.flex-column.justify-center.content-center.w-100
+  [:div.flex.flex-column.justify-center.content-center.w-100.bg-washed-blue
    [home-page]])

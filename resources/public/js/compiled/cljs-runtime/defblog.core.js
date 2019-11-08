@@ -22,8 +22,18 @@ return reagent.core.render.cljs$core$IFn$_invoke$arity$2(new cljs.core.Persisten
 defblog.core.init = (function defblog$core$init(){
 (defblog.routes.app_routes.cljs$core$IFn$_invoke$arity$0 ? defblog.routes.app_routes.cljs$core$IFn$_invoke$arity$0() : defblog.routes.app_routes.call(null));
 
+<<<<<<< HEAD
 var G__44328_44329 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.events","initialize-db","defblog.events/initialize-db",1258958176)], null);
 (re_frame.core.dispatch_sync.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.dispatch_sync.cljs$core$IFn$_invoke$arity$1(G__44328_44329) : re_frame.core.dispatch_sync.call(null,G__44328_44329));
+=======
+<<<<<<< HEAD
+var G__44274_44275 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.events","initialize-db","defblog.events/initialize-db",1258958176)], null);
+(re_frame.core.dispatch_sync.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.dispatch_sync.cljs$core$IFn$_invoke$arity$1(G__44274_44275) : re_frame.core.dispatch_sync.call(null,G__44274_44275));
+=======
+var G__44194_44195 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.events","initialize-db","defblog.events/initialize-db",1258958176)], null);
+(re_frame.core.dispatch_sync.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.dispatch_sync.cljs$core$IFn$_invoke$arity$1(G__44194_44195) : re_frame.core.dispatch_sync.call(null,G__44194_44195));
+>>>>>>> master
+>>>>>>> development
 
 defblog.core.dev_setup();
 
