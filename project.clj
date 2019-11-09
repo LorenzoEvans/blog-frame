@@ -20,7 +20,7 @@
 
   :min-lein-version "2.5.3"
 
-  :source-paths ["src/clj" "src/cljs"]
+  :source-paths ["src/cljs"]
 
   :clean-targets ^{:protect false} ["resources/public/js/compiled" "target"]
 
@@ -35,7 +35,7 @@
 
    :uberjar {:source-paths ["env/prod/clj"]
              :omit-source  true
-             :main         defblog.server
-             :aot          [defblog.server]
+             :main         defblog.core
+             :aot          [defblog.core]
              :uberjar-name "defblog.jar"
              :prep-tasks   ["compile" ["prod"]]}})

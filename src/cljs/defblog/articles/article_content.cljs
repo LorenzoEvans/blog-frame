@@ -34,7 +34,7 @@
       [:figure {:id "f16e0311-3237-4325-89ff-6d10d35aebd6", :class "image"}
        [:a {:href "Lambda Labs GraphQL Part I/Screen_Shot_2019-10-19_at_5.09.20_PM.png"}
         [:img.h-50.w-50 { :src "/assets/firebase.png"}]]]
-      [:p {:id "ad1ee1bb-440b-419c-afcd-f6fbf5afa09e", }]
+      [:p {:id "ad1ee1bb-440b-419c-afcd-f6fbf5afa09e",}]
       [:p {:id "b434bbdf-98b7-4ce7-8c96-c0f1c6e28533", } "This was a really, really tricky bug to catch, because it occurs as if it was an error with the 3rd party login, while expressing itself like an error in the code, while the actual solution was actually changing a setting in the Firebase console to allow users to sign up/in from various instances at the same time."]
       [:figure {:class "block-color-brown_background callout", :id "670744b6-62df-4604-b402-c1b54fe551a2"}
        [:div 
@@ -42,5 +42,5 @@
        [:div "The two emails, ange.lasalle91@gmail, and codehfffdack2018@gmail, belong to my team-mates, the latter of which is the owner of one of the twitter accounts appearing with a dash as opposed to an email. They're great developers, and team-mates. If you're in need of that, I'm sure an email would be received warmly."]]
       [:h2 {:id "fa617f21-d7bd-416e-8080-968850af9001", } "Part Two: Milestone Reflections."]]
      [:div {:id "5bfc0ea2-40a1-4ad2-bbd8-4661eb2db7f4", :class "column"}
-      [:p {:id "06c8a43f-6f4a-42c4-a3a9-52987c666e9f", }]]]
+      [:p {:id "06c8a43f-6f4a-42c4-a3a9-52987c666e9f",}]]]
     [:p {:id "f12277bd-83db-4cc6-b320-27a73f5033a4", } "I think that was the most important take-away, with the second being that sometimes, you have to try a thing, that doesn't work, but leads you to another thing, that works a little better, that leads you to something that gets the job done. It can be frustrating to build something up, just to have to tear it down, again and again, but you get a little better at building each time, and eventually that process pays major dividends."]]])

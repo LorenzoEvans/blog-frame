@@ -8,6 +8,4 @@
                 :modules         {:app {:init-fn defblog.core/init
                                         :preloads [devtools.preload]}}
                 :devtools        {:http-root    "resources/public"
-                                  :http-port    8280
-                                  :http-handler defblog.handler/dev-handler
-                                  }}}}
+                                  :http-port    8280}}}}

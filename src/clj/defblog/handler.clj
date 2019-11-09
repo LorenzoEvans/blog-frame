@@ -6,7 +6,7 @@
    [ring.middleware.reload :refer [wrap-reload]]
    [shadow.http.push-state :as push-state]))
 
-(defroutes routes "")
+(defroutes routes "/lambda")
 
 (def dev-handler (-> #'routes wrap-reload push-state/handle))
 
