@@ -11,25 +11,27 @@
                            article-section-style]]
    [defblog.db :refer [default-db]]
    [defblog.events :as events]
+   [defblog.subs :as subs]
    [re-frame.core :as re-frame]))
 
-(defn article-card [content-store]
-  [:div.overflow-scroll {:class article-section-style}
-   (for [item content-store]
-     ^{:key (item :title)} [:div.overlay-gradient-2.hover-bg-near-white {:class article-card-style}
-                            [:a.overflow-hidden.no-underline.fw5.link.f3.near-black.items-center.grow.hover-silver.hover-dark-red
-                             {:href (item :url)
-                              :on-click #(re-frame/dispatch [::events/set-active-article (item :panel-name)])}
+; (defn article-card [content-store]
+;   [:div.overflow-scroll {:class article-section-style}
+;    (for [item content-store]
+;      ^{:key (item :title)} [:div.overlay-gradient-2.hover-bg-near-white {:class article-card-style}
+;                             [:a.overflow-hidden.no-underline.fw5.link.f3.near-black.items-center.grow.hover-silver.hover-dark-red
+;                              {:href (item :url)
+;                               :on-click #(re-frame/dispatch [::events/set-active-panel (item :panel-name)])}
 
-                             (item :title)]
-                            [:p.f5.black-70.near-black.fw5.w-80.bb.b--black.bw1 (item :prev)]])])
+;                              (item :title)]
+;                             [:p.f5.black-70.near-black.fw5.w-80.bb.b--black.bw1 (item :prev)]])])
 
 
 (defn article []
   (fn []
-    (let [active-article @(re-frame/subscribe [:active-article])])))                          
-(defn article-section []
-  [article-card (get-in default-db [:content])])
+    (let [active-article (re-frame/subscribe [::subs/active-article])]
+      [:div (get-in default-db [:content @active-article :title])])))                          
+; (defn article-section []
+;   [article-card (get-in default-db [:content])])
 
 (defn blog-title-content []
   [:div.overlay-gradient {:class title-style}
@@ -49,13 +51,14 @@
         [:a.anchor-hover {:class anchor-style :href "#/"} "About"]
         [:a.anchor-hover {:class anchor-style :href ""} "Github"]
         [:a.anchor-hover {:class anchor-style :href "/"} "Twitter"]
-        [:a.anchor-hover {:class anchor-style :href "/"} "Misc"]]]]]
-    [article-section]]])
+        [:a.anchor-hover {:class anchor-style :href "/"} "Misc"]]]]]]])
+    
 
 (defn home-page []
   [:div.w-100
    [:nav.w-100 {:class nav-style}]
-   [blog-title]])
+   [blog-title]
+   [article]])
 
 (defn homepage  []
   [:div.flex.flex-column.justify-center.content-center.w-100.bg-washed-blue

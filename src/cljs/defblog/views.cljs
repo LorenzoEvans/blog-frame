@@ -2,7 +2,8 @@
   (:require
    [re-frame.core :as re-frame]
    [defblog.subs :as subs]
-   [defblog.layout :refer [homepage]]
+   [defblog.layout :refer [homepage article]]
+   [defblog.db :refer [default-db]]
    [defblog.articles.article_content :refer [labs-article-data]]))
 
 (defn about-panel []
@@ -23,13 +24,21 @@
 
 ;; main
 
-
+; (defn article []
+;   (let [active-article (get-in default-db [:active-article])]
+;     [:div
+;       [:header active-article]
+;       [:p "got it"]]))
+    
+    
+  
 (defn- panels [panel-name & article-name]
-  (case panel-name
-    :home-panel [home-panel]
-    :about-panel [about-panel]
-    :article [:div "hi"]
-    [:div]))
+  (let [active-article (re-frame/subscribe [::subs/active-article])] 
+    (case panel-name
+      :home-panel [home-panel]
+      :about-panel [about-panel]
+      @active-article [article]
+     [:div])))
 
 (defn show-panel [panel-name]
   [panels panel-name])
