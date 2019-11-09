@@ -43,9 +43,12 @@
 
 (defn article []
   (fn []
-    (let [active-article (re-frame/subscribe [::subs/active-article])]
-      [:div "hi" (js/console.log (get-in default-db [:content @active-article :title])) "hi"
-       [:div "umm"]])))                          
+    (let [active-article (re-frame/subscribe [::subs/active-panel])
+          kw @active-article]
+      [:div
+       [:div (get-in default-db [:content kw :title])]]))) 
+       
+       
 (defn article-section []
   [article-card (get-in default-db [:content])])
 
