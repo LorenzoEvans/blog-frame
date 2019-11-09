@@ -42,11 +42,11 @@
     
 
 (defn article []
-  (fn []
     (let [active-article (re-frame/subscribe [::subs/active-panel])
           kw @active-article]
       [:div
-       [:div (get-in default-db [:content kw :title])]]))) 
+       [:div (get-in default-db [:content kw :title])]
+       [:div [(get-in default-db [:content kw :full-article])]]])) 
        
        
 (defn article-section []
