@@ -16,7 +16,7 @@
 
 ; (defn article-card [content-store]
 ;   [:div.overflow-scroll {:class article-section-style}
-;    (for [item content-store]
+;    (for [item (seq content-store)]
 ;      ^{:key (item :title)} [:div.overlay-gradient-2.hover-bg-near-white {:class article-card-style}
 ;                             [:a.overflow-hidden.no-underline.fw5.link.f3.near-black.items-center.grow.hover-silver.hover-dark-red
 ;                              {:href (item :url)
@@ -25,13 +25,17 @@
 ;                              (item :title)]
 ;                             [:p.f5.black-70.near-black.fw5.w-80.bb.b--black.bw1 (item :prev)]])])
 
+(defn article-card [content-store]
+  [:div.overflow-scroll {:class article-section-style}
+   (for [item (seq content-store)]
+    (js/console.log (second item)))])
 
 (defn article []
   (fn []
     (let [active-article (re-frame/subscribe [::subs/active-article])]
       [:div (get-in default-db [:content @active-article :title])])))                          
-; (defn article-section []
-;   [article-card (get-in default-db [:content])])
+(defn article-section []
+  [article-card (get-in default-db [:content])])
 
 (defn blog-title-content []
   [:div.overlay-gradient {:class title-style}
@@ -58,7 +62,7 @@
   [:div.w-100
    [:nav.w-100 {:class nav-style}]
    [blog-title]
-   [article]])
+   [article-section]])
 
 (defn homepage  []
   [:div.flex.flex-column.justify-center.content-center.w-100.bg-washed-blue
