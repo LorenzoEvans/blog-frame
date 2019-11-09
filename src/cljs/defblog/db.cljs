@@ -1,5 +1,5 @@
 (ns defblog.db
-  (:require [defblog.articles.article_content :refer [labs-article-data]]))
+  (:require [defblog.articles.article_content :refer [labs-article-data how-fp-data]]))
 
 (def default-db
   {:name "re-frame"
@@ -28,7 +28,7 @@
                         :prev "One night, a little Haskell, and here we are."
                         :url "/how-fp"
                         :panel-name :how-fp
-                        :full-article labs-article-data}
+                        :full-article how-fp-data}
               :how-lisp  {:title "Haskell's list of secrets" 
                           :prev "Hold on, wait, you mean like the speech impediment?"
                            :url "/how-lisp"
@@ -45,7 +45,7 @@
                          :panel-name :how-code}
               :functional-fe {:title "My preferred Front End Set Up" :prev "If you make me write CSS, it's going to be functional!"
                               :url "/functional-front-end"
-                              :panel-name :functional-fe
+                              :panel-name :functional-fe 
                               :full-article labs-article-data})
    :misc {:mit-scheme-lectures "link"
                    :100rco "link"
