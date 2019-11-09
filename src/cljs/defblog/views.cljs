@@ -24,10 +24,11 @@
 ;; main
 
 
-(defn- panels [panel-name]
+(defn- panels [panel-name & article-name]
   (case panel-name
     :home-panel [home-panel]
     :about-panel [about-panel]
+    :article [:div "hi"]
     :lambda-labs-gql-1 [labs-article-data]
     [:div]))
 

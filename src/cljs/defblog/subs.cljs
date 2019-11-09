@@ -13,7 +13,7 @@
    (:active-panel db)))
 
 (re-frame/reg-sub
-  ::active-page
+  ::active-article
   (fn [db _]
-    (:active-page db)))
+    (:active-article db)))
    

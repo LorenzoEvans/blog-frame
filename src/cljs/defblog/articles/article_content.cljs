@@ -1,5 +1,10 @@
 (ns defblog.articles.article_content)
 
+
+
+
+(defn article-full [])
+  
 (defn labs-article-data []
   [:div "\t\t\t\t"
    [:header "\t\t\t\t\t"

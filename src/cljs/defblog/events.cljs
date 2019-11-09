@@ -12,3 +12,10 @@
  ::set-active-panel
  (fn [db [_ active-panel]]
    (assoc db :active-panel active-panel)))
+
+(re-frame/reg-event-db
+  ::set-active-article
+  (fn [db [_ active-article]]
+      (assoc db :active-article active-article)))
+   
+   
