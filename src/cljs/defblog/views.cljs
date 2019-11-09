@@ -29,7 +29,6 @@
     :home-panel [home-panel]
     :about-panel [about-panel]
     :article [:div "hi"]
-    :lambda-labs-gql-1 [labs-article-data]
     [:div]))
 
 (defn show-panel [panel-name]

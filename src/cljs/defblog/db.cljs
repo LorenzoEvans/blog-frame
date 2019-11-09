@@ -7,7 +7,8 @@
               :url "/lambda-labs-gql-1"
               :panel-name :lambda-labs-gql-1}
              {:title "Lambda Labs & Firebase, Part II" :prev "A quick but vivid journey into the world of O-Auth."
-              :url "/lambda-labs-2-firebase"}
+              :url "/lambda-labs-2-firebase"
+              :panel-name :lambda-labs-gql-2}
              {:title "Lambda Labs & O-Auth Part II" :prev "A quick but vivid journey into the world of O-Auth."
               :url "lambda-labs-3-firebase"}
              {:title "An Abridged History of Linux" :prev "How one rebellious Finnish kid redefined an OS."
