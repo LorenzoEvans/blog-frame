@@ -16,5 +16,5 @@
 (re-frame/reg-event-db
   ::active-article
   (fn [db [_ active-article]]
-      (assoc db :active-panel active-article)))
+      (assoc db :active-article active-article)))
    

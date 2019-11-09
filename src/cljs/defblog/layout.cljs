@@ -27,18 +27,25 @@
 
 (defn article-card [content-store]
   [:div.overflow-scroll {:class article-section-style}
-   (for [item (seq content-store)]
+   (for [item content-store]
     ^{:key (first item)}
     (let [kw (first item)
           data (second item)]
-     ^{:key kw}  
-      [:div (:title data)]))])
+     ^{:key kw}
+      [:div.overlay-gradient-2.hover-bg-near-white {:class article-card-style}
+       [:h1 (:title data)]
+       [:a.overflow-hidden.no-underline.fw5.link.f3.near-black.items-center.grow.hover-silver.hover-dark-red
+         { :href (:url data)
+           :on-click #(re-frame/dispatch [::events/set-active-panel (:panel-name data)])}  "Read"]
+       [:p.f5.black-70.near-black.fw5.w-80.bb.b--black.bw1 (:prev data)]]))])
+          
     
 
 (defn article []
   (fn []
     (let [active-article (re-frame/subscribe [::subs/active-article])]
-      [:div (get-in default-db [:content @active-article :title])])))                          
+      [:div "hi" (js/console.log (get-in default-db [:content @active-article :title])) "hi"
+       [:div "umm"]])))                          
 (defn article-section []
   [article-card (get-in default-db [:content])])
 

@@ -2,7 +2,7 @@
   (:require
    [re-frame.core :as re-frame]
    [defblog.subs :as subs]
-   [defblog.layout :refer [homepage article]]
+   [defblog.layout :refer [homepage]]
    [defblog.db :refer [default-db]]
    [defblog.articles.article_content :refer [labs-article-data]]))
 
@@ -24,11 +24,11 @@
 
 ;; main
 
-; (defn article []
-;   (let [active-article (get-in default-db [:active-article])]
-;     [:div
-;       [:header active-article]
-;       [:p "got it"]]))
+(defn article []
+  (let [active-article (get-in default-db [:active-article])]
+    [:div
+      [:header (js/console.log active-article)]
+      [:p "got it"]]))
     
     
   
@@ -37,7 +37,7 @@
     (case panel-name
       :home-panel [home-panel]
       :about-panel [about-panel]
-      @active-article [article]
+      (keywordize @active-article) [article]
      [:div])))
 
 (defn show-panel [panel-name]
