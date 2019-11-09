@@ -50,12 +50,15 @@
 
   (defroute "/lambda-labs-gql-1" []
     (re-frame/dispatch [::events/set-active-panel :lambda-labs-gql-1]))
-  
+
   (defroute "/lambda-labs-2-firebase" []
     (re-frame/dispatch [::events/set-active-panel :lambda-labs-gql-2]))
-  
+
   (defroute "/lambda-labs-3-firebase" []
     (re-frame/dispatch [::events/set-active-panel :lambda-labs-gql-3]))
+
+  (defroute "/how-fp" []
+    (re-frame/dispatch [::events/set-active-panel :how-fp]))
   ; --------------------
 
 

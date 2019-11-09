@@ -28,27 +28,23 @@
 (defn article-card [content-store]
   [:div.overflow-scroll {:class article-section-style}
    (for [item content-store]
-    ^{:key (first item)}
-    (let [kw (first item)
-          data (second item)]
-     ^{:key kw}
-      [:div.overlay-gradient-2.hover-bg-near-white {:class article-card-style}
-       [:h1 (:title data)]
-       [:a.overflow-hidden.no-underline.fw5.link.f3.near-black.items-center.grow.hover-silver.hover-dark-red
-         { :href (:url data)
-           :on-click #(re-frame/dispatch [::events/set-active-panel (:panel-name data)])}  "Read"]
-       [:p.f5.black-70.near-black.fw5.w-80.bb.b--black.bw1 (:prev data)]]))])
-          
-    
+     ^{:key (first item)}
+     (let [kw (first item)
+           data (second item)]
+       ^{:key kw}
+       [:div.overlay-gradient-2.hover-bg-near-white {:class article-card-style}
+        [:h1 (:title data)]
+        [:a.overflow-hidden.no-underline.fw5.link.f3.near-black.items-center.grow.hover-silver.hover-dark-red
+         {:href (:url data)
+          :on-click #(re-frame/dispatch [::events/set-active-panel (:panel-name data)])} "more"]
+        [:p.f5.black-70.near-black.fw5.w-80.bb.b--black.bw1 (:prev data)]]))])
 
 (defn article []
-    (let [active-article (re-frame/subscribe [::subs/active-panel])
-          kw @active-article]
-      [:div
-       [:div (get-in default-db [:content kw :title])]
-       [:div [(get-in default-db [:content kw :full-article])]]])) 
-       
-       
+  (let [active-article (re-frame/subscribe [::subs/active-panel])
+        kw @active-article]
+    [:div
+     [:div (get-in default-db [:content kw :full-article])]]))
+
 (defn article-section []
   [article-card (get-in default-db [:content])])
 
@@ -71,7 +67,6 @@
         [:a.anchor-hover {:class anchor-style :href ""} "Github"]
         [:a.anchor-hover {:class anchor-style :href "/"} "Twitter"]
         [:a.anchor-hover {:class anchor-style :href "/"} "Misc"]]]]]]])
-    
 
 (defn home-page []
   [:div.w-100
