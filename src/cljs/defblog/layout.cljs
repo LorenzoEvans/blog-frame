@@ -28,7 +28,12 @@
 (defn article-card [content-store]
   [:div.overflow-scroll {:class article-section-style}
    (for [item (seq content-store)]
-    (js/console.log (second item)))])
+    ^{:key (first item)}
+    (let [kw (first item)
+          data (second item)]
+     ^{:key kw}  
+      [:div (:title data)]))])
+    
 
 (defn article []
   (fn []

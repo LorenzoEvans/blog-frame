@@ -12,7 +12,7 @@
                                   :prev "A quick but vivid journey into the world of O-Auth."
                                   :url "/lambda-labs-2-firebase"
                                   :panel-name :lambda-labs-gql-2}
-              :lambda-labs-gql-3 {:title "Lambda Labs & O-Auth Part II" 
+              :lambda-labs-gql-3 {:title "Lambda Labs & O-Auth Part III" 
                                   :prev "A quick but vivid journey into the world of O-Auth."
                                   :url "lambda-labs-3-firebase"
                                   :panel-name :lambda-labs-gql-3}
