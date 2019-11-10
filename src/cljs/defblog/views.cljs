@@ -4,7 +4,6 @@
    [defblog.subs :as subs]
    [defblog.events]
    [defblog.routes]
-   [defblog.core]
    [defblog.styles]
    [defblog.layout :refer [homepage article]]
    [defblog.db :refer [default-db]]
@@ -24,14 +23,13 @@
   [:div.flex.flex-column.justify-between.bg-image
    [homepage]])
 
-  
 (defn- panels [panel-name & article-name]
   (let [active-article (re-frame/subscribe [::subs/active-panel])]
     (case panel-name
       :home-panel [home-panel]
       :about-panel [about-panel]
       (keywordize @active-article) [article]
-     [:div])))
+      [:div])))
 
 (defn show-panel [panel-name]
   [panels panel-name])

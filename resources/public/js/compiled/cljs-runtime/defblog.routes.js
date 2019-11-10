@@ -24,15 +24,15 @@ secretary.core.set_config_BANG_(new cljs.core.Keyword(null,"prefix","prefix",-26
 
 var action__41630__auto___41697 = (function (params__41631__auto__){
 if(cljs.core.map_QMARK_(params__41631__auto__)){
-var map__41652 = params__41631__auto__;
-var map__41652__$1 = (((((!((map__41652 == null))))?(((((map__41652.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__41652.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__41652):map__41652);
-var G__41654 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.events","set-active-panel","defblog.events/set-active-panel",-1784795604),new cljs.core.Keyword(null,"home-panel","home-panel",1226198754)], null);
-return (re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1(G__41654) : re_frame.core.dispatch.call(null,G__41654));
+var map__41648 = params__41631__auto__;
+var map__41648__$1 = (((((!((map__41648 == null))))?(((((map__41648.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__41648.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__41648):map__41648);
+var G__41650 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.events","set-active-panel","defblog.events/set-active-panel",-1784795604),new cljs.core.Keyword(null,"home-panel","home-panel",1226198754)], null);
+return (re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1(G__41650) : re_frame.core.dispatch.call(null,G__41650));
 } else {
 if(cljs.core.vector_QMARK_(params__41631__auto__)){
-var vec__41656 = params__41631__auto__;
-var G__41659 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.events","set-active-panel","defblog.events/set-active-panel",-1784795604),new cljs.core.Keyword(null,"home-panel","home-panel",1226198754)], null);
-return (re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1(G__41659) : re_frame.core.dispatch.call(null,G__41659));
+var vec__41651 = params__41631__auto__;
+var G__41654 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.events","set-active-panel","defblog.events/set-active-panel",-1784795604),new cljs.core.Keyword(null,"home-panel","home-panel",1226198754)], null);
+return (re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1(G__41654) : re_frame.core.dispatch.call(null,G__41654));
 } else {
 return null;
 }
@@ -43,15 +43,15 @@ secretary.core.add_route_BANG_("/",action__41630__auto___41697);
 
 var action__41630__auto___41698 = (function (params__41631__auto__){
 if(cljs.core.map_QMARK_(params__41631__auto__)){
-var map__41660 = params__41631__auto__;
-var map__41660__$1 = (((((!((map__41660 == null))))?(((((map__41660.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__41660.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__41660):map__41660);
-var G__41662 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.events","set-active-panel","defblog.events/set-active-panel",-1784795604),new cljs.core.Keyword(null,"about-panel","about-panel",334628515)], null);
-return (re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1(G__41662) : re_frame.core.dispatch.call(null,G__41662));
+var map__41655 = params__41631__auto__;
+var map__41655__$1 = (((((!((map__41655 == null))))?(((((map__41655.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__41655.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__41655):map__41655);
+var G__41657 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.events","set-active-panel","defblog.events/set-active-panel",-1784795604),new cljs.core.Keyword(null,"about-panel","about-panel",334628515)], null);
+return (re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1(G__41657) : re_frame.core.dispatch.call(null,G__41657));
 } else {
 if(cljs.core.vector_QMARK_(params__41631__auto__)){
-var vec__41663 = params__41631__auto__;
-var G__41667 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.events","set-active-panel","defblog.events/set-active-panel",-1784795604),new cljs.core.Keyword(null,"about-panel","about-panel",334628515)], null);
-return (re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1(G__41667) : re_frame.core.dispatch.call(null,G__41667));
+var vec__41658 = params__41631__auto__;
+var G__41663 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.events","set-active-panel","defblog.events/set-active-panel",-1784795604),new cljs.core.Keyword(null,"about-panel","about-panel",334628515)], null);
+return (re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1(G__41663) : re_frame.core.dispatch.call(null,G__41663));
 } else {
 return null;
 }
@@ -62,15 +62,15 @@ secretary.core.add_route_BANG_("/about",action__41630__auto___41698);
 
 var action__41630__auto___41700 = (function (params__41631__auto__){
 if(cljs.core.map_QMARK_(params__41631__auto__)){
-var map__41668 = params__41631__auto__;
-var map__41668__$1 = (((((!((map__41668 == null))))?(((((map__41668.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__41668.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__41668):map__41668);
-var G__41670 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.events","set-active-panel","defblog.events/set-active-panel",-1784795604),new cljs.core.Keyword(null,"lambda-labs-gql-1","lambda-labs-gql-1",462979742)], null);
-return (re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1(G__41670) : re_frame.core.dispatch.call(null,G__41670));
+var map__41666 = params__41631__auto__;
+var map__41666__$1 = (((((!((map__41666 == null))))?(((((map__41666.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__41666.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__41666):map__41666);
+var G__41668 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.events","set-active-panel","defblog.events/set-active-panel",-1784795604),new cljs.core.Keyword(null,"lambda-labs-gql-1","lambda-labs-gql-1",462979742)], null);
+return (re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1(G__41668) : re_frame.core.dispatch.call(null,G__41668));
 } else {
 if(cljs.core.vector_QMARK_(params__41631__auto__)){
-var vec__41671 = params__41631__auto__;
-var G__41674 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.events","set-active-panel","defblog.events/set-active-panel",-1784795604),new cljs.core.Keyword(null,"lambda-labs-gql-1","lambda-labs-gql-1",462979742)], null);
-return (re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1(G__41674) : re_frame.core.dispatch.call(null,G__41674));
+var vec__41669 = params__41631__auto__;
+var G__41672 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.events","set-active-panel","defblog.events/set-active-panel",-1784795604),new cljs.core.Keyword(null,"lambda-labs-gql-1","lambda-labs-gql-1",462979742)], null);
+return (re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1(G__41672) : re_frame.core.dispatch.call(null,G__41672));
 } else {
 return null;
 }
@@ -79,42 +79,42 @@ return null;
 secretary.core.add_route_BANG_("/lambda-labs-gql-1",action__41630__auto___41700);
 
 
-var action__41630__auto___41702 = (function (params__41631__auto__){
+var action__41630__auto___41701 = (function (params__41631__auto__){
 if(cljs.core.map_QMARK_(params__41631__auto__)){
-var map__41676 = params__41631__auto__;
-var map__41676__$1 = (((((!((map__41676 == null))))?(((((map__41676.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__41676.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__41676):map__41676);
-var G__41678 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.events","set-active-panel","defblog.events/set-active-panel",-1784795604),new cljs.core.Keyword(null,"lambda-labs-gql-2","lambda-labs-gql-2",375628964)], null);
-return (re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1(G__41678) : re_frame.core.dispatch.call(null,G__41678));
+var map__41673 = params__41631__auto__;
+var map__41673__$1 = (((((!((map__41673 == null))))?(((((map__41673.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__41673.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__41673):map__41673);
+var G__41676 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.events","set-active-panel","defblog.events/set-active-panel",-1784795604),new cljs.core.Keyword(null,"lambda-labs-gql-2","lambda-labs-gql-2",375628964)], null);
+return (re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1(G__41676) : re_frame.core.dispatch.call(null,G__41676));
 } else {
 if(cljs.core.vector_QMARK_(params__41631__auto__)){
-var vec__41679 = params__41631__auto__;
-var G__41682 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.events","set-active-panel","defblog.events/set-active-panel",-1784795604),new cljs.core.Keyword(null,"lambda-labs-gql-2","lambda-labs-gql-2",375628964)], null);
-return (re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1(G__41682) : re_frame.core.dispatch.call(null,G__41682));
+var vec__41677 = params__41631__auto__;
+var G__41680 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.events","set-active-panel","defblog.events/set-active-panel",-1784795604),new cljs.core.Keyword(null,"lambda-labs-gql-2","lambda-labs-gql-2",375628964)], null);
+return (re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1(G__41680) : re_frame.core.dispatch.call(null,G__41680));
 } else {
 return null;
 }
 }
 });
-secretary.core.add_route_BANG_("/lambda-labs-2-firebase",action__41630__auto___41702);
+secretary.core.add_route_BANG_("/lambda-labs-2-firebase",action__41630__auto___41701);
 
 
-var action__41630__auto___41703 = (function (params__41631__auto__){
+var action__41630__auto___41704 = (function (params__41631__auto__){
 if(cljs.core.map_QMARK_(params__41631__auto__)){
-var map__41683 = params__41631__auto__;
-var map__41683__$1 = (((((!((map__41683 == null))))?(((((map__41683.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__41683.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__41683):map__41683);
-var G__41685 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.events","set-active-panel","defblog.events/set-active-panel",-1784795604),new cljs.core.Keyword(null,"lambda-labs-gql-3","lambda-labs-gql-3",-1011174006)], null);
-return (re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1(G__41685) : re_frame.core.dispatch.call(null,G__41685));
+var map__41681 = params__41631__auto__;
+var map__41681__$1 = (((((!((map__41681 == null))))?(((((map__41681.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__41681.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__41681):map__41681);
+var G__41684 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.events","set-active-panel","defblog.events/set-active-panel",-1784795604),new cljs.core.Keyword(null,"lambda-labs-gql-3","lambda-labs-gql-3",-1011174006)], null);
+return (re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1(G__41684) : re_frame.core.dispatch.call(null,G__41684));
 } else {
 if(cljs.core.vector_QMARK_(params__41631__auto__)){
-var vec__41686 = params__41631__auto__;
-var G__41689 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.events","set-active-panel","defblog.events/set-active-panel",-1784795604),new cljs.core.Keyword(null,"lambda-labs-gql-3","lambda-labs-gql-3",-1011174006)], null);
-return (re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1(G__41689) : re_frame.core.dispatch.call(null,G__41689));
+var vec__41685 = params__41631__auto__;
+var G__41688 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.events","set-active-panel","defblog.events/set-active-panel",-1784795604),new cljs.core.Keyword(null,"lambda-labs-gql-3","lambda-labs-gql-3",-1011174006)], null);
+return (re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.dispatch.cljs$core$IFn$_invoke$arity$1(G__41688) : re_frame.core.dispatch.call(null,G__41688));
 } else {
 return null;
 }
 }
 });
-secretary.core.add_route_BANG_("/lambda-labs-3-firebase",action__41630__auto___41703);
+secretary.core.add_route_BANG_("/lambda-labs-3-firebase",action__41630__auto___41704);
 
 
 var action__41630__auto___41705 = (function (params__41631__auto__){
