@@ -16,14 +16,14 @@ return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMP
 });
 defblog.views.panels = (function defblog$views$panels(var_args){
 var args__4736__auto__ = [];
-var len__4730__auto___45775 = arguments.length;
-var i__4731__auto___45776 = (0);
+var len__4730__auto___46079 = arguments.length;
+var i__4731__auto___46080 = (0);
 while(true){
-if((i__4731__auto___45776 < len__4730__auto___45775)){
-args__4736__auto__.push((arguments[i__4731__auto___45776]));
+if((i__4731__auto___46080 < len__4730__auto___46079)){
+args__4736__auto__.push((arguments[i__4731__auto___46080]));
 
-var G__45777 = (i__4731__auto___45776 + (1));
-i__4731__auto___45776 = G__45777;
+var G__46081 = (i__4731__auto___46080 + (1));
+i__4731__auto___46080 = G__46081;
 continue;
 } else {
 }
@@ -35,20 +35,20 @@ return defblog.views.panels.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]
 });
 
 defblog.views.panels.cljs$core$IFn$_invoke$arity$variadic = (function (panel_name,article_name){
-var active_article = (function (){var G__45772 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.subs","active-panel","defblog.subs/active-panel",-382304736)], null);
-return (re_frame.core.subscribe.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.subscribe.cljs$core$IFn$_invoke$arity$1(G__45772) : re_frame.core.subscribe.call(null,G__45772));
+var active_article = (function (){var G__46076 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.subs","active-panel","defblog.subs/active-panel",-382304736)], null);
+return (re_frame.core.subscribe.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.subscribe.cljs$core$IFn$_invoke$arity$1(G__46076) : re_frame.core.subscribe.call(null,G__46076));
 })();
-var G__45773 = panel_name;
-if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"home-panel","home-panel",1226198754),G__45773)){
+var G__46077 = panel_name;
+if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"home-panel","home-panel",1226198754),G__46077)){
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [defblog.views.home_panel], null);
 } else {
-if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"about-panel","about-panel",334628515),G__45773)){
+if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"about-panel","about-panel",334628515),G__46077)){
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [defblog.views.about_panel], null);
 } else {
-if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.Symbol(null,"keywordize","keywordize",-1273225011,null),G__45773)){
+if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.Symbol(null,"keywordize","keywordize",-1273225011,null),G__46077)){
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [defblog.layout.article], null);
 } else {
-if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(cljs.core.deref(active_article),G__45773)){
+if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(cljs.core.deref(active_article),G__46077)){
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [defblog.layout.article], null);
 } else {
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632)], null);
@@ -62,19 +62,19 @@ return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMP
 defblog.views.panels.cljs$lang$maxFixedArity = (1);
 
 /** @this {Function} */
-defblog.views.panels.cljs$lang$applyTo = (function (seq45770){
-var G__45771 = cljs.core.first(seq45770);
-var seq45770__$1 = cljs.core.next(seq45770);
+defblog.views.panels.cljs$lang$applyTo = (function (seq46074){
+var G__46075 = cljs.core.first(seq46074);
+var seq46074__$1 = cljs.core.next(seq46074);
 var self__4717__auto__ = this;
-return self__4717__auto__.cljs$core$IFn$_invoke$arity$variadic(G__45771,seq45770__$1);
+return self__4717__auto__.cljs$core$IFn$_invoke$arity$variadic(G__46075,seq46074__$1);
 });
 
 defblog.views.show_panel = (function defblog$views$show_panel(panel_name){
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [defblog.views.panels,panel_name], null);
 });
 defblog.views.main_panel = (function defblog$views$main_panel(){
-var active_panel = (function (){var G__45774 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.subs","active-panel","defblog.subs/active-panel",-382304736)], null);
-return (re_frame.core.subscribe.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.subscribe.cljs$core$IFn$_invoke$arity$1(G__45774) : re_frame.core.subscribe.call(null,G__45774));
+var active_panel = (function (){var G__46078 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("defblog.subs","active-panel","defblog.subs/active-panel",-382304736)], null);
+return (re_frame.core.subscribe.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.subscribe.cljs$core$IFn$_invoke$arity$1(G__46078) : re_frame.core.subscribe.call(null,G__46078));
 })();
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [defblog.views.show_panel,cljs.core.deref(active_panel)], null);
 });

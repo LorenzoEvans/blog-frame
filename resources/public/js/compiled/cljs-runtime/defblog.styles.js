@@ -15,7 +15,7 @@ defblog.styles.article_card_style = "w-30 h6-l link avenir washed-blue ba bw1 br
 defblog.styles.article_section_style = "overflow-scroll bt b--washed-blue bw2 flex justify-center flex-wrap w-100";
 defblog.styles.title_quote = "pa2 bw1 pa2 h4 avenir w-100 o-80 f4 fw3 pa3 ma2 text-hover tracked-mega-ns washed-blue";
 defblog.styles.full_article = "vh-100 vw-100";
-defblog.styles.article_header = "fn fl-ns w-50-ns pr4-ns";
+defblog.styles.article_header = "fn fl-ns w-100 pr4-ns";
 defblog.styles.article_title = "f2 lh-title fw9 mb3 w-100 mt0 pt3";
 
 //# sourceMappingURL=defblog.styles.js.map

@@ -26,6 +26,6 @@
 
 (def full-article "vh-100 vw-100")
 
-(def article-header "fn fl-ns w-50-ns pr4-ns")
+(def article-header "fn fl-ns w-100 pr4-ns")
 
 (def article-title "f2 lh-title fw9 mb3 w-100 mt0 pt3")
