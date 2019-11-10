@@ -4,6 +4,7 @@
    [defblog.subs :as subs]
    [defblog.events]
    [defblog.routes]
+   [defblog.styles]
    [defblog.layout :refer [homepage article]]
    [defblog.db :refer [default-db]]
    [defblog.articles.article_content :refer [labs-article-data]]))

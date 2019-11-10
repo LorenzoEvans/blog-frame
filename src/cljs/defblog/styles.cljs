@@ -2,7 +2,7 @@
   (:require [herb.core :refer [defglobal]]))
 
 (defglobal global
-  [:body :html {:margin 0}]
+  [:body {:height "100vh" :margin 0} :html {:margin 0 :min-height "100%" :height "100vh"}]
   [:#app {:height "100vh"}])
 
 (def title-style "flex flex-column justify-center br1 ba b--b--washed-blue bw3 grow mw6 mv5 vh-75 dt hide-child cover bg-center bw1 pa3 tc self-center fw3 f1 mt3 items-center mb3 tl self-center washed-red hover-washed-blue hover-bg-black")
@@ -20,6 +20,12 @@
 
 (def article-card-style "w-30 h6-l link avenir washed-blue ba bw1 br2 b--near-white pa3 flex flex-column justify-around ma3")
 
-(def article-section-style "overflow-scroll vh-75 bt b--washed-blue bw2 flex justify-center flex-wrap w-100")
+(def article-section-style "overflow-scroll bt b--washed-blue bw2 flex justify-center flex-wrap w-100")
 
 (def title-quote "pa2 bw1 pa2 h4 avenir w-100 o-80 f4 fw3 pa3 ma2 text-hover tracked-mega-ns washed-blue")
+
+(def full-article "vh-100 vw-100")
+
+(def article-header "fn fl-ns w-50-ns pr4-ns")
+
+(def article-title "f2 lh-title fw9 mb3 w-100 mt0 pt3")

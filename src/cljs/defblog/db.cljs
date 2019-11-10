@@ -28,7 +28,7 @@
                                  :prev "One night, a little Haskell, and here we are."
                                  :url "/how-fp"
                                  :panel-name :how-fp
-                                 :full-article [:div [how-fp-data]]}
+                                 :full-article [:div.h-auto.vh-100.bg-washed-red [how-fp-data]]}
                        :how-lisp  {:title "Haskell's list of secrets"
                                    :prev "Hold on, wait, you mean like the speech impediment?"
                                    :url "/how-lisp"
