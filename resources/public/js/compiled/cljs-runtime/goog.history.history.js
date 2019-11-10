@@ -7,7 +7,7 @@ goog.require("goog.dom");
 goog.require("goog.dom.InputType");
 goog.require("goog.dom.safe");
 /**
- * @suppress {extraRequire}
+ @suppress {extraRequire}
  */
 goog.require("goog.events.Event");
 goog.require("goog.events.EventHandler");
@@ -24,12 +24,12 @@ goog.require("goog.string");
 goog.require("goog.string.Const");
 goog.require("goog.userAgent");
 /**
- * @constructor
- * @extends {goog.events.EventTarget}
- * @param {boolean=} opt_invisible
- * @param {!goog.html.TrustedResourceUrl=} opt_blankPageUrl
- * @param {HTMLInputElement=} opt_input
- * @param {HTMLIFrameElement=} opt_iframe
+ @constructor
+ @extends {goog.events.EventTarget}
+ @param {boolean=} opt_invisible
+ @param {!goog.html.TrustedResourceUrl=} opt_blankPageUrl
+ @param {HTMLInputElement=} opt_input
+ @param {HTMLIFrameElement=} opt_iframe
  */
 goog.History = function(opt_invisible, opt_blankPageUrl, opt_input, opt_iframe) {
   goog.events.EventTarget.call(this);
@@ -89,7 +89,7 @@ goog.inherits(goog.History, goog.events.EventTarget);
 /** @private @type {boolean} */ goog.History.prototype.longerPolling_ = false;
 /** @private @type {?string} */ goog.History.prototype.lastToken_ = null;
 /**
- * @return {boolean}
+ @return {boolean}
  */
 goog.History.isOnHashChangeSupported = goog.memoize(function() {
   return goog.userAgent.IE ? goog.userAgent.isDocumentModeOrHigher(8) : "onhashchange" in goog.global;
@@ -103,7 +103,7 @@ goog.History.isOnHashChangeSupported = goog.memoize(function() {
   this.setEnabled(false);
 };
 /**
- * @param {boolean} enable
+ @param {boolean} enable
  */
 goog.History.prototype.setEnabled = function(enable) {
   if (enable == this.enabled_) {
@@ -150,8 +150,8 @@ goog.History.prototype.setEnabled = function(enable) {
   this.setEnabled(this.shouldEnable_);
 };
 /**
- * @private
- * @param {goog.events.BrowserEvent} e
+ @private
+ @param {goog.events.BrowserEvent} e
  */
 goog.History.prototype.onShow_ = function(e) {
   if (e.getBrowserEvent()["persisted"]) {
@@ -160,8 +160,8 @@ goog.History.prototype.onShow_ = function(e) {
   }
 };
 /**
- * @private
- * @param {goog.events.BrowserEvent} e
+ @private
+ @param {goog.events.BrowserEvent} e
  */
 goog.History.prototype.onHashChange_ = function(e) {
   var hash = this.getLocationFragment_(this.window_);
@@ -170,7 +170,7 @@ goog.History.prototype.onHashChange_ = function(e) {
   }
 };
 /**
- * @return {string}
+ @return {string}
  */
 goog.History.prototype.getToken = function() {
   if (this.lockedToken_ != null) {
@@ -184,23 +184,23 @@ goog.History.prototype.getToken = function() {
   }
 };
 /**
- * @param {string} token
- * @param {string=} opt_title
+ @param {string} token
+ @param {string=} opt_title
  */
 goog.History.prototype.setToken = function(token, opt_title) {
   this.setHistoryState_(token, false, opt_title);
 };
 /**
- * @param {string} token
- * @param {string=} opt_title
+ @param {string} token
+ @param {string=} opt_title
  */
 goog.History.prototype.replaceToken = function(token, opt_title) {
   this.setHistoryState_(token, true, opt_title);
 };
 /**
- * @private
- * @param {Window} win
- * @return {string}
+ @private
+ @param {Window} win
+ @return {string}
  */
 goog.History.prototype.getLocationFragment_ = function(win) {
   var href = win.location.href;
@@ -208,10 +208,10 @@ goog.History.prototype.getLocationFragment_ = function(win) {
   return index < 0 ? "" : href.substring(index + 1);
 };
 /**
- * @private
- * @param {string} token
- * @param {boolean} replace
- * @param {string=} opt_title
+ @private
+ @param {string} token
+ @param {boolean} replace
+ @param {string=} opt_title
  */
 goog.History.prototype.setHistoryState_ = function(token, replace, opt_title) {
   if (this.getToken() != token) {
@@ -233,9 +233,9 @@ goog.History.prototype.setHistoryState_ = function(token, replace, opt_title) {
   }
 };
 /**
- * @private
- * @param {string} token
- * @param {boolean=} opt_replace
+ @private
+ @param {string} token
+ @param {boolean=} opt_replace
  */
 goog.History.prototype.setHash_ = function(token, opt_replace) {
   var loc = this.window_.location;
@@ -253,10 +253,10 @@ goog.History.prototype.setHash_ = function(token, opt_replace) {
   }
 };
 /**
- * @private
- * @param {string} token
- * @param {boolean=} opt_replace
- * @param {string=} opt_title
+ @private
+ @param {string} token
+ @param {boolean=} opt_replace
+ @param {string=} opt_title
  */
 goog.History.prototype.setIframeToken_ = function(token, opt_replace, opt_title) {
   if (this.unsetIframe_ || token != this.getIframeToken_()) {
@@ -283,8 +283,8 @@ goog.History.prototype.setIframeToken_ = function(token, opt_replace, opt_title)
   }
 };
 /**
- * @private
- * @return {?string}
+ @private
+ @return {?string}
  */
 goog.History.prototype.getIframeToken_ = function() {
   if (goog.userAgent.IE) {
@@ -312,8 +312,8 @@ goog.History.prototype.getIframeToken_ = function() {
   }
 };
 /**
- * @private
- * @param {boolean} isNavigation
+ @private
+ @param {boolean} isNavigation
  */
 goog.History.prototype.check_ = function(isNavigation) {
   if (this.userVisible_) {
@@ -333,9 +333,9 @@ goog.History.prototype.check_ = function(isNavigation) {
   }
 };
 /**
- * @private
- * @param {string} token
- * @param {boolean} isNavigation
+ @private
+ @param {string} token
+ @param {boolean} isNavigation
  */
 goog.History.prototype.update_ = function(token, isNavigation) {
   this.lastToken_ = this.hiddenInput_.value = token;
@@ -350,8 +350,8 @@ goog.History.prototype.update_ = function(token, isNavigation) {
   this.dispatchEvent(new goog.history.Event(this.getToken(), isNavigation));
 };
 /**
- * @private
- * @param {boolean} longerPolling
+ @private
+ @param {boolean} longerPolling
  */
 goog.History.prototype.setLongerPolling_ = function(longerPolling) {
   if (this.longerPolling_ != longerPolling) {
@@ -367,14 +367,14 @@ goog.History.prototype.setLongerPolling_ = function(longerPolling) {
 /** @private @type {number} */ goog.History.historyCount_ = 0;
 /** @enum {number} */ goog.History.PollingType = {NORMAL:150, LONG:10000};
 /**
- * @enum {string}
- * @deprecated Use goog.history.EventType.
+ @enum {string}
+ @deprecated Use goog.history.EventType.
  */
 goog.History.EventType = goog.history.EventType;
 /**
- * @final
- * @constructor
- * @deprecated Use goog.history.Event.
+ @final
+ @constructor
+ @deprecated Use goog.history.Event.
  */
 goog.History.Event = goog.history.Event;
 

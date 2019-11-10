@@ -7,7 +7,7 @@ shadow.js.add_native_require = function(name, obj) {
   shadow.js.nativeRequires[name] = obj;
 };
 /**
- * @return {ShadowJS}
+ @return {ShadowJS}
  */
 shadow.js.jsRequire = function(name, opts) {
   var nativeObj = shadow.js.nativeRequires[name];
